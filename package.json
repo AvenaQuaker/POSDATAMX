@@ -12,11 +12,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@tailwindcss/cli": "^4.1.13",
         "chai": "^4.0.0",
         "chai-http": "^4.4.0",
         "cors": "^2.8.5",
         "crypto": "^1.0.1",
-        "express": "^4.19.2",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
         "express-session": "^1.18.0",
         "https": "^1.0.0",
         "mongoose": "^8.8.1",
@@ -26,6 +28,7 @@
         "swagger-jsdoc": "^6.2.8",
         "swagger-themes": "^1.4.3",
         "swagger-ui-express": "^5.0.1",
+        "tailwindcss": "^4.1.13",
         "zod": "^3.23.8"
     },
     "devDependencies": {

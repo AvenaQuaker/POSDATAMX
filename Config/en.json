@@ -1,0 +1,175 @@
+{
+    "nav": {
+        "inicio": "HOME",
+        "acerca": "ABOUT",
+        "servicios": "SERVICES",
+        "equipo": "TEAM",
+        "contacto": "CONTACT",
+        "menu": "MENU"
+    },
+    "inicio": {
+        "titulo": "POSDATAMX",
+        "contactanos": "Contact Us"
+    },
+    "acerca": {
+        "titulo": "WHAT WE DO",
+        "descripcion": "We are a company dedicated to providing comprehensive solutions in corporate communication and digital marketing. We help organizations improve their online presence, connect with clients, and strengthen their brand positioning.",
+        "caracteristicas": [
+            "Innovative Features",
+            "Multiple Demos",
+            "Dedicated Support",
+            "Digital Campaigns",
+            "Content Management",
+            "Creative Designs"
+        ],
+        "leer_mas": "READ MORE"
+    },
+    "servicios": {
+        "titulo": "OUR SERVICES",
+        "cards": [
+            {
+                "titulo": "DESIGN",
+                "descripcion": "We create attractive and functional designs that reflect your brand’s identity and improve the user experience.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "DEVELOPMENT",
+                "descripcion": "We develop websites and custom applications tailored to your business needs.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "TESTING",
+                "descripcion": "We carry out quality tests to ensure the proper functioning of digital platforms and services.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "MARKETING",
+                "descripcion": "We design digital strategies that increase your company’s visibility and help attract more clients.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "BRANDING",
+                "descripcion": "We boost your brand’s identity with creative concepts that strengthen its recognition in the market.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "SUPPORT",
+                "descripcion": "We provide specialized technical support to guarantee the stability and continuity of your services.",
+                "leer_mas": "READ MORE →"
+            }
+        ]
+    },
+    "contacto": {
+        "titulo": "PROFESSIONAL CONSULTING SERVICES",
+        "descripcion1": "We offer specialized consulting in communication, marketing, and digital development to help your company achieve its goals more efficiently.",
+        "descripcion2": "We work hand in hand with you to optimize processes, implement new tools, and ensure that your digital strategy is successful.",
+        "mensaje": "We want to hear from you!",
+        "sugerencia": "Suggest a new section to include in future updates.",
+        "cotizar": "REQUEST A QUOTE"
+    },
+    "galeria": {
+        "titulo": "OUR GALLERY",
+        "cards": [
+            "Design",
+            "Development",
+            "Testing",
+            "Marketing",
+            "Branding",
+            "Support"
+        ]
+    },
+    "equipo": {
+        "titulo": "OUR TEAM",
+        "descripcion": "We have a team of professionals passionate about design, marketing, and technology, ready to provide innovative solutions for every project.",
+        "leer_mas": "READ MORE",
+        "miembros": [
+            {
+                "nombre": "PETERSON",
+                "rol": "DEVELOPER"
+            },
+            {
+                "nombre": "JUAN PÉREZ",
+                "rol": "CEO"
+            },
+            {
+                "nombre": "LARA EMILY",
+                "rol": "MANAGER"
+            }
+        ]
+    },
+    "noticias": {
+        "titulo": "OUR LATEST NEWS",
+        "cards": [
+            {
+                "titulo": "WE LAUNCH NEW DIGITAL PORTFOLIO",
+                "descripcion": "We present our new portfolio of online services, with improved tools and interactive content.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "NEW STRATEGIC ALLIANCE",
+                "descripcion": "We have signed an alliance with local companies to expand the reach of our digital solutions.",
+                "leer_mas": "READ MORE →"
+            },
+            {
+                "titulo": "POSDATAMX AT BUSINESS EVENT",
+                "descripcion": "We participated in the region’s most important digital innovation event, sharing our expertise.",
+                "leer_mas": "READ MORE →"
+            }
+        ]
+    },
+    "testimonios": {
+        "titulo": "TESTIMONIALS",
+        "personas": [
+            {
+                "nombre": "Carlos Ramirez",
+                "rol": "Designer",
+                "mensaje": "The POSDATAMX team helped us renew our website, and now we are receiving many more potential clients."
+            },
+            {
+                "nombre": "Maria Gonzalez",
+                "rol": "Marketing Manager",
+                "mensaje": "Excellent service and results. Their digital strategies improved our social media presence significantly."
+            },
+            {
+                "nombre": "Jorge Martinez",
+                "rol": "CEO",
+                "mensaje": "Working with POSDATAMX was a great experience. They met deadlines, and the quality of the project was outstanding."
+            }
+        ]
+    },
+    "contactanos": {
+        "titulo": "GET IN TOUCH",
+        "descripcion": "If you would like more information about our services or have a project in mind, please complete the form below and we will contact you.",
+        "form": {
+            "nombre": "Name",
+            "email": "Email",
+            "mensaje": "Message",
+            "enviar": "SEND MESSAGE"
+        }
+    },
+    "footer": {
+        "direccion": "ADDRESS",
+        "direccion1": "123, Majestic Hall, New York, USA.",
+        "correo": "company@mail.com",
+        "telefono": "+01 234 567 8910",
+        "enlaces": "SITE LINKS",
+        "enlace1": "Our Company",
+        "enlace2": "Our Locations",
+        "enlace3": "Program",
+        "enlace4": "Privacy Policy",
+        "enlace5": "Your Account",
+        "enlace6": "Contact Us",
+        "post_reciente": "RECENT POSTS",
+        "post1": {
+            "descripcion": "We introduce new digital solutions adapted to today’s market.",
+            "fecha": "March 24, 2018",
+            "autor": "Caroline"
+        },
+        "post2": {
+            "descripcion": "We start new projects in collaboration with partner companies.",
+            "fecha": "March 24, 2018",
+            "autor": "Jackson"
+        },
+        "copyright": "2025 © All Rights Reserved"
+    }
+}

@@ -1,0 +1,175 @@
+{
+    "nav": {
+        "inicio": "INICIO",
+        "acerca": "ACERCA",
+        "servicios": "SERVICIOS",
+        "equipo": "EQUIPO",
+        "contacto": "CONTACTO",
+        "menu": "MENÚ"
+    },
+    "inicio": {
+        "titulo": "POSDATAMX",
+        "contactanos": "Contáctanos"
+    },
+    "acerca": {
+        "titulo": "LO QUE HACEMOS",
+        "descripcion": "Somos una empresa dedicada a brindar soluciones integrales en comunicación corporativa y marketing digital. Ayudamos a las organizaciones a mejorar su presencia en línea, conectar con sus clientes y posicionar su marca.",
+        "caracteristicas": [
+            "Características Innovadoras",
+            "Múltiples Demostraciones",
+            "Soporte Dedicado",
+            "Campañas Digitales",
+            "Gestión de Contenido",
+            "Diseños Creativos"
+        ],
+        "leer_mas": "LEER MÁS"
+    },
+    "servicios": {
+        "titulo": "NUESTROS SERVICIOS",
+        "cards": [
+            {
+                "titulo": "DISEÑO",
+                "descripcion": "Creamos diseños atractivos y funcionales que transmiten la identidad de tu marca y mejoran la experiencia del usuario.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "DESARROLLO",
+                "descripcion": "Desarrollamos páginas web y aplicaciones personalizadas, adaptadas a las necesidades de tu negocio.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "PRUEBAS",
+                "descripcion": "Realizamos pruebas de calidad para asegurar el correcto funcionamiento de las plataformas y servicios digitales.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "MARKETING",
+                "descripcion": "Diseñamos estrategias digitales que ayudan a incrementar la visibilidad de tu empresa y atraer más clientes.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "BRANDING",
+                "descripcion": "Impulsamos la identidad de tu marca con conceptos creativos que fortalecen su reconocimiento en el mercado.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "SOPORTE",
+                "descripcion": "Ofrecemos soporte técnico especializado para garantizar la estabilidad y continuidad de tus servicios.",
+                "leer_mas": "LEER MÁS →"
+            }
+        ]
+    },
+    "contacto": {
+        "titulo": "SERVICIOS DE CONSULTORÍA PROFESIONAL",
+        "descripcion1": "Ofrecemos asesoría especializada en comunicación, marketing y desarrollo digital para que tu empresa logre sus objetivos de manera más eficiente.",
+        "descripcion2": "Trabajamos de la mano contigo para optimizar procesos, implementar nuevas herramientas y garantizar que tu estrategia digital sea exitosa.",
+        "mensaje": "¡Queremos escucharte!",
+        "sugerencia": "Sugiere una nueva sección para incluir en futuras actualizaciones.",
+        "cotizar": "SOLICITAR COTIZACIÓN"
+    },
+    "galeria": {
+        "titulo": "NUESTRA GALERÍA",
+        "cards": [
+            "Diseño",
+            "Desarrollo",
+            "Pruebas",
+            "Marketing",
+            "Branding",
+            "Soporte"
+        ]
+    },
+    "equipo": {
+        "titulo": "NUESTRO EQUIPO",
+        "descripcion": "Contamos con un equipo de profesionales apasionados en diseño, marketing y tecnología, listos para aportar soluciones innovadoras a cada proyecto.",
+        "leer_mas": "LEER MÁS",
+        "miembros": [
+            {
+                "nombre": "PETERSON",
+                "rol": "DESARROLLADOR"
+            },
+            {
+                "nombre": "JUAN PÉREZ",
+                "rol": "DIRECTOR GENERAL"
+            },
+            {
+                "nombre": "LARA EMILY",
+                "rol": "GERENTE"
+            }
+        ]
+    },
+    "noticias": {
+        "titulo": "NUESTRAS ÚLTIMAS NOTICIAS",
+        "cards": [
+            {
+                "titulo": "LANZAMOS NUEVO PORTAFOLIO DIGITAL",
+                "descripcion": "Presentamos nuestro nuevo portafolio de servicios en línea, con herramientas mejoradas y contenido interactivo.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "NUEVA ALIANZA ESTRATÉGICA",
+                "descripcion": "Hemos firmado una alianza con empresas locales para potenciar el alcance de nuestras soluciones digitales.",
+                "leer_mas": "LEER MÁS →"
+            },
+            {
+                "titulo": "POSDATAMX EN EVENTO EMPRESARIAL",
+                "descripcion": "Participamos en el evento más importante de innovación digital de la región, compartiendo nuestra experiencia.",
+                "leer_mas": "LEER MÁS →"
+            }
+        ]
+    },
+    "testimonios": {
+        "titulo": "TESTIMONIOS",
+        "personas": [
+            {
+                "nombre": "Carlos Ramírez",
+                "rol": "Diseñador",
+                "mensaje": "El equipo de POSDATAMX nos ayudó a renovar nuestra página web y ahora recibimos muchos más clientes potenciales."
+            },
+            {
+                "nombre": "María González",
+                "rol": "Gerente de Marketing",
+                "mensaje": "Excelente atención y resultados. Sus estrategias digitales lograron mejorar nuestra presencia en redes sociales."
+            },
+            {
+                "nombre": "Jorge Martínez",
+                "rol": "CEO",
+                "mensaje": "Trabajar con POSDATAMX fue una gran experiencia. Cumplieron con los tiempos y la calidad del proyecto fue excepcional."
+            }
+        ]
+    },
+    "contactanos": {
+        "titulo": "CONTÁCTANOS",
+        "descripcion": "Si deseas más información sobre nuestros servicios o tienes un proyecto en mente, completa el siguiente formulario y nos pondremos en contacto contigo.",
+        "form": {
+            "nombre": "Nombre",
+            "email": "Correo electrónico",
+            "mensaje": "Mensaje",
+            "enviar": "ENVIAR MENSAJE"
+        }
+    },
+    "footer": {
+        "direccion": "DIRECCIÓN",
+        "direccion1": "123, Majestic Hall, Nueva York, EE.UU.",
+        "correo": "company@mail.com",
+        "telefono": "+01 234 567 8910",
+        "enlaces": "ENLACES DEL SITIO",
+        "enlace1": "Nuestra Empresa",
+        "enlace2": "Nuestras Sucursales",
+        "enlace3": "Programa",
+        "enlace4": "Política de Privacidad",
+        "enlace5": "Tu Cuenta",
+        "enlace6": "Contáctanos",
+        "post_reciente": "PUBLICACIONES RECIENTES",
+        "post1": {
+            "descripcion": "Presentamos nuevas soluciones digitales adaptadas al mercado actual.",
+            "fecha": "24 de marzo, 2018",
+            "autor": "Carolina"
+        },
+        "post2": {
+            "descripcion": "Iniciamos nuevos proyectos en colaboración con empresas aliadas.",
+            "fecha": "24 de marzo, 2018",
+            "autor": "Jackson"
+        },
+        "copyright": "2025 © Todos los Derechos Reservados"
+    }
+}
