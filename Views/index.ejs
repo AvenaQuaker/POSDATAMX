@@ -9,21 +9,21 @@
         <link rel="stylesheet" href="css/mainTW.css">
 </head>
 <body class="bg-sky-50 w-full h-full font-Montserrat">
-    <!--================================= NAVIGATION START ==========================================-->
+<!--================================= NAVIGATION START ==========================================-->
 <header>
 	<nav id="mainNav" 
-		class="fixed top-0 left-0 w-full bg-stone-50 py-3 px-4 shadow-md transition-all duration-500 -translate-y-full opacity-0 z-30">
+		class="fixed top-0 left-0 w-full bg-gray-800 py-3 px-4 shadow-md transition-all duration-500 -translate-y-full opacity-0 z-30">
 		<div class="flex justify-between items-center mx-6 lg:mx-40">
 		<!-- Logo -->
-		<img src="images/agency/150x50.png" alt="150x50" class="h-10">
+		<img src="images/LogoBlanco.png" alt="150x50" class="h-10">
 
 		<!-- Opciones en pantallas grandes -->
 		<div class="hidden md:flex space-x-6">
-		<a id="navInicio" href="#inicio" class="text-gray-700 hover:underline font-semibold text-[1rem]"><%= translations.nav.inicio %></a>
-		<a id="navAcerca" href="#acerca" class="text-gray-700 hover:underline font-semibold text-[1rem]"><%= translations.nav.acerca %></a>
-		<a id="navServicios" href="#servicios" class="text-gray-700 hover:underline font-semibold text-[1rem]"><%= translations.nav.servicios %></a>
-		<a id="navEquipo" href="#equipo" class="text-gray-700 hover:underline font-semibold text-[1rem]"><%= translations.nav.equipo %></a>
-		<a id="navContacto" href="#contacto" class="text-gray-700 hover:underline font-semibold text-[1rem]"><%= translations.nav.contacto %></a>
+		<a id="navInicio" href="#inicio" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.inicio %></a>
+		<a id="navAcerca" href="#acerca" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.acerca %></a>
+		<a id="navServicios" href="#servicios" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.servicios %></a>
+		<a id="navEquipo" href="#equipo" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.equipo %></a>
+		<a id="navContacto" href="#contacto" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.contacto %></a>
 		</div>
 
 		<!-- Botón hamburguesa (visible en móviles) -->
@@ -49,11 +49,11 @@
 		</button>
 		</div>
 		<div class="flex flex-col p-6 space-y-4">
-		<a id="menuInicio" href="#inicio" class="text-gray-700 hover:underline font-semibold">INICIO</a>
-		<a id="menuAcerca" href="#acerca" class="text-gray-700 hover:underline font-semibold">ACERCA</a>
-		<a id="menuServicios" href="#servicios" class="text-gray-700 hover:underline font-semibold">SERVICIOS</a>
-		<a id="menuEquipo" href="#equipo" class="text-gray-700 hover:underline font-semibold">EQUIPO</a>
-		<a id="menuContacto" href="#contacto" class="text-gray-700 hover:underline font-semibold">CONTACTO</a>
+		<a id="menuInicio" href="#inicio" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.inicio %></a>
+		<a id="menuAcerca" href="#acerca" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.acerca %></a>
+		<a id="menuServicios" href="#servicios" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.servicios %></a>
+		<a id="menuEquipo" href="#equipo" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.equipo %></a>
+		<a id="menuContacto" href="#contacto" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.contacto %></a>
 		</div>
 	</div>
 </header>
@@ -65,57 +65,37 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <!--================================= NAVIGATION END ==========================================-->
 <section id="inicio" class="bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/research/case_studies/concept_a/mh_cs_concept_a.jpg)] bg-fixed bg-cover h-[60rem] flex justify-center items-center">
 	<div class="bg-black/70 h-full w-[70%] lg:w-[30%] flex flex-col justify-center items-center text-center gap-4">
-		<img src="images/agency/64x64x1.png" alt="64x64x1">
-		<h1 class="text-white text-5xl font-bold font-sams mx-40">POSDATAMX</h1>
-		<a href="#" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-blue-700">Contáctanos</a>
+		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-48">
+		<a href="#" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-blue-700"><%= translations.inicio.contactanos %></a>
 	</div>
 </section>
 <!--================================= ABOUT US START ==========================================-->
-<section id="acerca" class="py-18 bg-gray-100 ">
+<section id="acerca" class="py-18 bg-gray-200 ">
 	<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center box-content">
 		<div class="flex flex-col items-center justify-center">
-		<h2 id="aboutTitulo" class="text-2xl font-bold text-gray-800 mb-4">WHAT WE ARE DOING</h2>
+		<h2 id="aboutTitulo" class="text-2xl font-bold text-gray-800 mb-4"><%= translations.acerca.titulo %></h2>
 		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
 
 		<p id="aboutDescripcion" class="text-gray-600 mb-6 text-[14px]">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-			Nunc tempus consequat blandit. Sed nec risus sapien. Lorem ipsum dolor sit amet, consectetur
-			adipiscing elit. Lorem ipsum dolor sit amet.
+			<%= translations.acerca.descripcion %>
 		</p>
 
-		<div id="aboutCaracteristicas" class="grid grid-cols-2 gap-4 mb-6 w-full">
+	<div id="aboutCaracteristicas" class="grid grid-cols-2 gap-4 mb-6 w-full">
+		<% translations.acerca.caracteristicas.forEach(function(c) { %>
 			<div class="flex items-center space-x-3">
-			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">40</div>
-			<span class="font-semibold text-gray-700">Amazing Features</span>
+			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">
+				*
 			</div>
-			<div class="flex items-center space-x-3">
-			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">40</div>
-			<span class="font-semibold text-gray-700">Multiple Demos</span>
+			<span class="font-semibold text-gray-700"><%= c %></span>
 			</div>
-			<div class="flex items-center space-x-3">
-			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">40</div>
-			<span class="font-semibold text-gray-700">Dedicated Support</span>
-			</div>
-			<div class="flex items-center space-x-3">
-			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">40</div>
-			<span class="font-semibold text-gray-700">Multiple Demos</span>
-			</div>
-			<div class="flex items-center space-x-3">
-			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">40</div>
-			<span class="font-semibold text-gray-700">Multiple Demos</span>
-			</div>
-			<div class="flex items-center space-x-3">
-			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">40</div>
-			<span class="font-semibold text-gray-700">Amazing Features</span>
-			</div>
-		</div>
+		<% }) %>
+	</div>
+
 		<a href="#" id="aboutLeer" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">
-			READ MORE
+			<%= translations.acerca.leer_mas %>
 		</a>
 		</div>
-		<div class="rounded w-full h-[25rem] bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		750×520
-		</div>
+		<img src="images/Imagen1.jpg" alt="128x128x1" class="h-[25rem] w-full rounded bg-cover bg-center hover:scale-105 transition">
 	</div>
 </section>
 <!--================================= ABOUT US END ==========================================-->
@@ -124,230 +104,144 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <div class="max-w-6xl mx-auto px-6 text-center box-content">
 
 <!-- Título -->
-<h2 id="" class="text-3xl font-bold text-gray-800">OUR SERVICES</h2>
+<h2 id="" class="text-3xl font-bold text-gray-800"><%= translations.servicios.titulo %></h2>
 <div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
 
 <!-- Grid de servicios -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-	<!-- Card -->
-	<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-	<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
-	<h3 class="text-lg font-bold text-gray-800 mb-2">DESIGNING</h3>
-	<p class="text-gray-600 mb-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-		Nunc tempus consequat blandit.
-	</p>
-	<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide">READ MORE →</a>
-	</div>
-	<!-- Card -->
-	<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-	<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
-	<h3 class="text-lg font-bold text-gray-800 mb-2">DEVELOPMENT</h3>
-	<p class="text-gray-600 mb-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-		Nunc tempus consequat blandit.
-	</p>
-	<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide">READ MORE →</a>
-	</div>
-	<!-- Card -->
-	<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-	<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
-	<h3 class="text-lg font-bold text-gray-800 mb-2">TESTING</h3>
-	<p class="text-gray-600 mb-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-		Nunc tempus consequat blandit.
-	</p>
-	<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide">READ MORE →</a>
-	</div>
-	<!-- Card -->
-	<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-	<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
-	<h3 class="text-lg font-bold text-gray-800 mb-2">MARKETING</h3>
-	<p class="text-gray-600 mb-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-		Nunc tempus consequat blandit.
-	</p>
-	<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide">READ MORE →</a>
-	</div>
-	<!-- Card -->
-	<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-	<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
-	<h3 class="text-lg font-bold text-gray-800 mb-2">BRANDING</h3>
-	<p class="text-gray-600 mb-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-		Nunc tempus consequat blandit.
-	</p>
-	<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide">READ MORE →</a>
-	</div>
-	<!-- Card -->
-	<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-	<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
-	<h3 class="text-lg font-bold text-gray-800 mb-2">SUPPORT</h3>
-	<p class="text-gray-600 mb-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-		Nunc tempus consequat blandit.
-	</p>
-	<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide">READ MORE →</a>
-	</div>
-
+	<% translations.servicios.cards.forEach(function(c) { %>
+			<!-- Card -->
+			<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
+			<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
+			<h3 class="text-lg font-bold text-gray-800 mb-2"><%= c.titulo %></h3>
+			<p class="text-gray-600 mb-4">
+				<%= c.descripcion %>
+			</p>
+			<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking-wide"><%= c.leer_mas %></a>
+			</div>
+	<% }) %>
 </div>
 </div>
 </section>
 <!--================================= OUR SERVICES END ==========================================-->
-<!--================================= CONTACT START ==========================================-->
-<section id="contacto" class="py-20 bg-gray-100">
+<!--================================= QUOTE START ==========================================-->
+<section class="py-20 bg-gray-200">
 	<div class="max-w-6xl mx-auto box-content px-6 grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-12 items-center">
 		
 		<!-- Columna izquierda (imagsen) -->
-		<div class="rounded w-full h-96 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		750×620
-		</div>
+		<img src="images/Imagen2.jpg" alt="128x128x1" class="h-96 w-full rounded hover:scale-105 transition">
 		
 		<!-- Columna derecha (contenido) -->
 		<div>
-		<h2 class="text-2xl font-bold text-gray-800 mb-2">PROFESSIONAL CONSULTING SERVICES</h2>
+		<h2 class="text-2xl font-bold text-gray-800 mb-2"><%= translations.contacto.titulo %></h2>
 		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
 		
 		<p class="text-gray-600 mb-4">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-			Nunc tempus consequat blandit. Sed nec risus sapien. Lorem ipsum dolor sit amet,
-			consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+			<%= translations.contacto.descripcion1 %>
 		</p>
 		<p class="text-gray-600 mb-6">
-			Consectetur adipiscing elit. Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-			Sed nec risus sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-			dolor sit amet, consectetur adipiscing elit.
+			<%= translations.contacto.descripcion2 %>
 		</p>
 		
 		<!-- Caja con mensaje y botón -->
 		<div class="rounded border border-gray-400 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
 			<div>
-			<h3 class="font-semibold text-gray-800">We Would love to hear from you!</h3>
-			<p class="text-gray-600 text-sm">Suggest a new landing page to add it in the next update</p>
+			<h3 class="font-semibold text-gray-800"><%= translations.contacto.sugerencia %></p>
 			</div>
 			<a href="#"
 			class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3">
-			GET QUOTE
+			<%= translations.contacto.cotizar %>
 			</a>
 		</div>
 		</div>
 		
 	</div>
 </section>
-<!--================================= CONTACT END ==========================================-->
+<!--================================= QUOTE END ==========================================-->
 <!--================================= GALLERY START ==========================================-->
 <section class="py-16 bg-white">
 <div class="max-w-6xl mx-auto px-6 text-center box-content">
 
 <!-- Título -->
-<h2 class="text-3xl font-bold text-gray-800">NUESTRA GALERIA</h2>
+<h2 class="text-3xl font-bold text-gray-800"><%= translations.galeria.titulo %></h2>
 <div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
 <!-- Grid de servicios -->
 <div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-12">
 	<!-- Card -->
-	<div class="relative group rounded w-full sm:col-span-2 h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		350×250
+	<div class="relative group rounded w-full sm:col-span-2 h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen3.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<!-- Overlay -->
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		Diseño
+		<%= translations.galeria.cards[0] %>
 		</div>
 	</div>
 
 	<!-- Card -->
-	<div class="relative group sm:row-span-2 rounded w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		350×250
+	<div class="relative group sm:row-span-2 rounded w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen6.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		Desarrollo
+		<%= translations.galeria.cards[1] %>
 		</div>
 	</div>
 
 	<!-- Card -->
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		350×250
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen7.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		Testing
+		<%= translations.galeria.cards[2] %>
 		</div>
 	</div>
 
 	<!-- Card -->
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		350×250
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen4.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		Marketing
+		<%= translations.galeria.cards[3] %>
 		</div>
 	</div>
 
 	<!-- Card -->
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		350×250
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen5.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		Branding
+		<%= translations.galeria.cards[4] %>
 		</div>
 	</div>
 
 	<!-- Card -->
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-		350×250
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen8.jpg')] bg-cover bg-center hover:scale-105 transition">
+	
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		Soporte
+		<%= translations.galeria.cards[5] %>
 		</div>
 	</div>
 </div>
 </section>
 <!--====================================== GALLERY END ========================================================-->
 <!--======================================= TEAM START ========================================================-->
-<section id="equipo" class="py-16 bg-gray-100">
+<section id="equipo" class="py-16 bg-gray-200">
 	<div class="box-content max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12">
 		
 		<!-- Columna izquierda -->
 		<div>
-		<h2 class="text-3xl font-bold text-gray-800 mb-2">OUR TEAM MEMBERS</h2>
+		<h2 class="text-3xl font-bold text-gray-800 mb-2"><%= translations.equipo.titulo %></h2>
 		<div class="w-28 h-2 bg-gray-300 mb-6"></div>
 		<p class="text-gray-600 mb-6">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-			Nunc tempus consequat blandit. Sed nec risus sapien. Lorem ipsum dolor sit amet,
-			consectetur adipiscing elit.
+			<%= translations.equipo.descripcion %>
 		</p>
 		<a href="#"
 			class= "hover:scale-105 transition bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded">
-			READ MORE
+			<%= translations.equipo.leer_mas %>
 		</a>
 		</div>
 
 		<!-- Columna derecha: Team Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-		
-		<!-- Card miembro -->
-		<div class="text-center">
-			<div class="w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 mb-4 hover:scale-105 transition">
-			360×380
+		<% translations.equipo.miembros.forEach(function(m) { %>
+			<!-- Card miembro -->
+			<div class="text-center">
+				<div style="background-image: url('<%= m.img %>');" class="w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 mb-4 bg-cover bg-center hover:scale-105 transition">
+				
+				</div>
+				<h3 class="font-bold text-gray-800 <%= m.nombre_mayusculas ? 'uppercase' : 'capitalize' %>"><%= m.nombre %></h3>
+				<p class="text-red-600 font-semibold text-sm mb-3"><%= m.rol %></p>
 			</div>
-			<h3 class="font-bold text-gray-800 uppercase">PETERSON</h3>
-			<p class="text-red-600 font-semibold text-sm mb-3">DEVELOPER</p>
-			<!-- Redes sociales -->
-	
-		</div>
-		
-		<!-- Card miembro -->
-		<div class="text-center">
-			<div class="w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 mb-4 hover:scale-105 transition">
-			360×380
-			</div>
-			<h3 class="font-bold text-gray-800 uppercase">JOHN DOE</h3>
-			<p class="text-red-600 font-semibold text-sm mb-3">CEO</p>
-
-		</div>
-
-		<!-- Card miembro -->
-		<div class="text-center">
-			<div class="w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 mb-4 hover:scale-105 transition">
-			360×380
-			</div>
-			<h3 class="font-bold text-gray-800 capitalize">Lara Emily</h3>
-			<p class="text-red-600 font-semibold text-sm mb-3">MANAGER</p>
-
-		</div>
-
+		<% }) %>
 		</div>
 	</div>
 </section>
@@ -357,54 +251,51 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <div class="max-w-6xl mx-auto px-6 text-center box-content">
 
 <!-- Título -->
-<h2 class="text-3xl font-bold text-gray-800">NUESTRAS ULTIMAS NOTICIAS</h2>
+<h2 class="text-3xl font-bold text-gray-800"><%= translations.noticias.titulo %></h2>
 <div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
 <!-- Grid de servicios -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-12">
 	<!-- Card -->
 	<div class="flex flex-col gap-1 hover:shadow-xl transition">
-		<div class="relative group rounded w-full h-80 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-			350×250
+		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+			
 		</div>
 		<div class="py-4 gap-2 flex flex-col bg-white">
-			<h3 class="text-xl font-bold text-gray-800 mt-2">NEWS TITLE HERE</h3>
+			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[0].titulo %></h3>
 			<p class="text-gray-600 text-sm">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-				Nunc tempus consequat blandit.
+				<%= translations.noticias.cards[0].descripcion %>
 			</p>
 					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
-					wide mt-2">READ MORE →</a>
+					wide mt-2"><%= translations.noticias.cards[0].leer_mas %></a>
 		</div>
 	</div>
 	<!-- Card -->
 	<div class="flex flex-col gap-1 hover:shadow-xl transition">
 		<div class="py-4 gap-2 flex flex-col bg-white">
-			<h3 class="text-xl font-bold text-gray-800 mt-2">NEWS TITLE HERE</h3>
+			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[1].titulo %></h3>
 			<p class="text-gray-600 text-sm">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-				Nunc tempus consequat blandit.
+				<%= translations.noticias.cards[1].descripcion %>
 			</p>
 					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
-					wide mt-2">READ MORE →</a>
+					wide mt-2"><%= translations.noticias.cards[1].leer_mas %></a>
 		</div>
-		<div class="relative group rounded w-full h-80 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-			350×250
+		<div style="background-image: url('<%= translations.noticias.cards[1].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+
 		</div>
 		
 	</div>
 	<!-- Card -->
 	<div class="flex flex-col gap-1 hover:shadow-xl transition">
-		<div class="relative group rounded w-full h-80 bg-gray-300 flex items-center justify-center text-gray-500 text-lg">
-			350×250
+		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+
 		</div>
 		<div class="py-4 gap-2 flex flex-col bg-white">
-			<h3 class="text-xl font-bold text-gray-800 mt-2">NEWS TITLE HERE</h3>
+			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[2].titulo %></h3>
 			<p class="text-gray-600 text-sm">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-				Nunc tempus consequat blandit.
+				<%= translations.noticias.cards[2].descripcion %>
 			</p>
 					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
-					wide mt-2">READ MORE →</a>
+					wide mt-2"><%= translations.noticias.cards[2].leer_mas %></a>
 		</div>
 	</div>
 </div>
@@ -415,112 +306,72 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 	<div class="max-w-6xl mx-auto px-6 text-center box-content">
 		
 		<!-- Título -->
-		<h2 class="text-3xl font-bold">OUR TESTIMONIAL</h2>
+		<h2 class="text-3xl font-bold"><%= translations.testimonios.titulo %></h2>
 		<div class="w-28 h-2 bg-gray-600 mx-auto my-4"></div>
-		
 		<!-- Grid de testimonios -->
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-		
-		<!-- Testimonio 1 -->
-		<div class="flex flex-col items-center">
-			<div class="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 mb-6">
-			100×100
+		<% translations.testimonios.personas.forEach(function(t) { %>
+			<!-- Testimonio -->
+			<div class="flex flex-col items-center">
+				<div style="background-image: url('<%= t.img %>')" class="bg-cover bg-center w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 mb-6">
+			
+				</div>
+				<p class="text-gray-300 mb-4">
+				<%= t.mensaje %>
+				</p>
+				<p class="font-bold">
+				<%= t.nombre %> <span class="text-red-500"><%= t.rol %></span>
+				</p>
 			</div>
-			<p class="text-gray-300 mb-4">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur non odio ut aliquet.
-			Donec nulla libero, posuere in vestibulum.
-			</p>
-			<p class="font-bold">
-			John Doe <span class="text-red-500">Designer</span>
-			</p>
+		<% }) %>
 		</div>
-		
-		<!-- Testimonio 2 -->
-		<div class="flex flex-col items-center">
-			<div class="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 mb-6">
-			100×100
-			</div>
-			<p class="text-gray-300 mb-4">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur non odio ut aliquet.
-			Donec nulla libero, posuere in vestibulum.
-			</p>
-			<p class="font-bold">
-			John Doe <span class="text-red-500">Designer</span>
-			</p>
-		</div>
-		
-		<!-- Testimonio 3 -->
-		<div class="flex flex-col items-center">
-			<div class="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 mb-6">
-			100×100
-			</div>
-			<p class="text-gray-300 mb-4">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur non odio ut aliquet.
-			Donec nulla libero, posuere in vestibulum.
-			</p>
-			<p class="font-bold">
-			John Doe <span class="text-red-500">Designer</span>
-			</p>
-		</div>
-		
-		</div>
-		
-		<!-- Paginador -->
-		<div class="flex justify-center space-x-3 mt-8">
-		<span class="w-3 h-3 rounded-full bg-gray-500"></span>
-		<span class="w-3 h-3 rounded-full bg-white"></span>
-		</div>
-		
 	</div>
 </section>
 <!--======================================= TESTIMONIAL END ========================================================-->
 <!--======================================= CONTACT US START =======================================================-->
-<section class="py-16 bg-white">
+<section id="contacto" class="py-16 bg-white">
 	<div class="max-w-6xl mx-auto px-6 text-center box-content">
 		
 		<!-- Título -->
-		<h2 class="text-3xl font-bold text-gray-800">GET IN TOUCH</h2>
+		<h2 class="text-3xl font-bold text-gray-800"><%= translations.contactanos.titulo %></h2>
 		<div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
 		<p class="text-gray-600 mb-8">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae semper nulla.
-			Nunc tempus consequat blandit. Sed nec risus sapien. Lorem ipsum dolor sit amet,
-			consectetur adipiscing elit.
+			<%= translations.contactanos.descripcion %>
 		</p>
 		
 		<!-- Formulario de contacto -->
 		<div class="flex flex-row gap-6">
 			<form class="w-full space-y-6 text-left">
 			<div>
-				<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-				<input type="text" id="name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Your Name">
+				<label for="name" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.nombre %></label>
+				<input type="text" id="name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="<%= translations.contactanos.form.nombre %>">
 			</div>
 			<div>
-				<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-				<input type="email" id="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Your Email">
+				<label for="email" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.email %></label>
+				<input type="email" id="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="<%= translations.contactanos.form.email %>">
 			</div>
 			<div>
-				<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-				<textarea id="message" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Your Message"></textarea>
+				<label for="message" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.mensaje %></label>
+				<textarea id="message" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="<%= translations.contactanos.form.mensaje %>"></textarea>
 			</div>
 			
 			<button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded">
-				SEND MESSAGE
+				<%= translations.contactanos.form.enviar %>
 			</button>
 			</form>
-			<div class="w-full  bg-gray-600 rounded"></div>
+			<div style="background-image: url('../images/Contact.jpg');"class="bg-cover bg-center w-full  bg-gray-600 rounded"></div>
         </div>
 	</div>
 </section>
 <!--======================================= CONTACT US END =======================================================-->
 <!--======================================= FOOTER START =======================================================-->
 <footer class="bg-gray-800 text-gray-300 pt-12">
-	<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.2fr_0.5fr_1.5fr] gap-8">
+	<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr_0.5fr_1.5fr] gap-8">
 		
 		<!-- Logo + Social -->
 		<div>
-		<div class="w-full h-24 bg-gray-500 flex items-center justify-center text-gray-200 mb-4">
-			250×100
-		</div>
+		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-28 mb-4 ">
+
 		<div class="flex space-x-3">
 			<span class="w-8 h-8 bg-gray-600 flex items-center justify-center text-xs">32</span>
 			<span class="w-8 h-8 bg-gray-600 flex items-center justify-center text-xs">32</span>
@@ -531,46 +382,46 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		
 		<!-- Address -->
 		<div>
-		<h3 class="text-white font-semibold mb-4">ADDRESS</h3>
-		<p class="flex items-start mb-2"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span>123, Majestic Hall, New York, USA.</p>
-		<p class="flex items-start mb-2"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span>company@mail.com</p>
-		<p class="flex items-start"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span>+01 234 567 8910</p>
+		<h3 class="text-white font-semibold mb-4"><%= translations.footer.direccion %></h3>
+		<p class="flex items-start mb-2"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span><%= translations.footer.direccion1 %></p>
+		<p class="flex items-start mb-2"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span><%= translations.footer.correo %></p>
+		<p class="flex items-start"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span><%= translations.footer.telefono %></p>
 		</div>
 		
 		<!-- Site Links -->
 		<div>
-		<h3 class="text-white font-semibold mb-4">SITE LINKS</h3>
+		<h3 class="text-white font-semibold mb-4"><%= translations.footer.enlaces %></h3>
 		<ul class="space-y-2">
-			<li><a href="#" class="hover:text-white">Our Company</a></li>
-			<li><a href="#" class="hover:text-white">Our Locations</a></li>
-			<li><a href="#" class="hover:text-white">Program</a></li>
-			<li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-			<li><a href="#" class="hover:text-white">Your Account</a></li>
-			<li><a href="#" class="hover:text-white">Contact Us</a></li>
+			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace1 %></a></li>
+			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace2 %></a></li>
+			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace3 %></a></li>
+			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace4 %></a></li>
+			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace5 %></a></li>
+			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace6 %></a></li>
 		</ul>
 		</div>
 		
 		<!-- Recent Post -->
 		<div>
-		<h3 class="text-white font-semibold mb-4">RECENT POST</h3>
+		<h3 class="text-white font-semibold mb-4"><%= translations.footer.post_reciente %></h3>
 		<div class="flex items-start mb-4">
 			<div class="w-20 h-16 bg-gray-500 flex items-center justify-center text-xs text-gray-200 mr-3">100×80</div>
 			<div>
-				<p class="text-sm" id="t-footer-post1-descripcion">Presentamos nuevas soluciones digitales adaptadas al mercado actual.</p>
-				<p class="text-xs text-gray-400 mt-1"><span class="bg-gray-600 text-white px-1">24</span> <span id="t-footer-post1-fecha">24 de marzo, 2018</span> • <span class="text-red-500" id="t-footer-post1-autor">Carolina</span></p>			</div>
+				<p class="text-sm" id="t-footer-post1-descripcion"><%= translations.footer.post1.descripcion %></p>
+				<p class="text-xs text-gray-400 mt-1"> <span id="t-footer-post1-fecha"><%= translations.footer.post1.fecha %></span> • <span class="text-red-500" id="t-footer-post1-autor"><%= translations.footer.autor %></span></p>			</div>
 		</div>
 		<div class="flex items-start">
 			<div class="w-20 h-16 bg-gray-500 flex items-center justify-center text-xs text-gray-200 mr-3">100×80</div>
 			<div>
-				<p class="text-sm" id="t-footer-post2-descripcion">Iniciamos nuevos proyectos en colaboración con empresas aliadas.</p>
-				<p class="text-xs text-gray-400 mt-1"><span class="bg-gray-600 text-white px-1">24</span> <span id="t-footer-post2-fecha">24 de marzo, 2018</span> • <span class="text-red-500" id="t-footer-post2-autor">Jackson</span></p>			</div>
+				<p class="text-sm" id="t-footer-post2-descripcion"><%= translations.footer.post2.descripcion %></p>
+				<p class="text-xs text-gray-400 mt-1"> <span id="t-footer-post2-fecha"><%= translations.footer.post2.fecha %></span> • <span class="text-red-500" id="t-footer-post2-autor"><%= translations.footer.autor %></span></p>			</div>
 		</div>
 		</div>
 		
 	</div>
 	
-	<div class="bg-gray-900 text-center text-gray-400 text-sm py-4 mt-8" id="footerCopy">
-        2025 © Todos los Derechos Reservados
+	<div class="bg-gray-900 text-center text-gray-200 text-sm py-4 mt-8" id="footerCopy">
+        <%= translations.footer.copyright %>
 </div>
 </footer>
 <!--======================================= FOOTER END =======================================================-->

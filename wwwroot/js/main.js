@@ -14,14 +14,12 @@ const menuBtn = document.getElementById("menuBtn");
   });
 const nav = document.getElementById("mainNav");
 
-  window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      // Cuando se scrollea hacia abajo, mostrar nav
       nav.classList.remove("-translate-y-full", "opacity-0");
       nav.classList.add("translate-y-0", "opacity-100");
     } else {
-      // Cuando se vuelve arriba, ocultar nav
       nav.classList.remove("translate-y-0", "opacity-100");
       nav.classList.add("-translate-y-full", "opacity-0");
     }
-  });
+});

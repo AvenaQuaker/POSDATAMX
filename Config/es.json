@@ -27,37 +27,32 @@
     "servicios": {
         "titulo": "NUESTROS SERVICIOS",
         "cards": [
-            {
-                "titulo": "DISEÑO",
-                "descripcion": "Creamos diseños atractivos y funcionales que transmiten la identidad de tu marca y mejoran la experiencia del usuario.",
-                "leer_mas": "LEER MÁS →"
-            },
-            {
-                "titulo": "DESARROLLO",
-                "descripcion": "Desarrollamos páginas web y aplicaciones personalizadas, adaptadas a las necesidades de tu negocio.",
-                "leer_mas": "LEER MÁS →"
-            },
-            {
-                "titulo": "PRUEBAS",
-                "descripcion": "Realizamos pruebas de calidad para asegurar el correcto funcionamiento de las plataformas y servicios digitales.",
-                "leer_mas": "LEER MÁS →"
-            },
-            {
-                "titulo": "MARKETING",
-                "descripcion": "Diseñamos estrategias digitales que ayudan a incrementar la visibilidad de tu empresa y atraer más clientes.",
-                "leer_mas": "LEER MÁS →"
-            },
-            {
-                "titulo": "BRANDING",
-                "descripcion": "Impulsamos la identidad de tu marca con conceptos creativos que fortalecen su reconocimiento en el mercado.",
-                "leer_mas": "LEER MÁS →"
-            },
-            {
-                "titulo": "SOPORTE",
-                "descripcion": "Ofrecemos soporte técnico especializado para garantizar la estabilidad y continuidad de tus servicios.",
-                "leer_mas": "LEER MÁS →"
-            }
-        ]
+        {
+            "titulo": "FOTOGRAFÍA",
+            "descripcion": "Capturamos los mejores momentos de tu empresa, productos y eventos con imágenes profesionales que transmiten confianza y creatividad.",
+            "leer_mas": "LEER MÁS →"
+        },
+        {
+            "titulo": "DISEÑO",
+            "descripcion": "Creamos piezas gráficas y visuales que reflejan la identidad de tu marca y mejoran su presencia en diferentes medios.",
+            "leer_mas": "LEER MÁS →"
+        },
+        {
+            "titulo": "MULTIMEDIA",
+            "descripcion": "Producimos contenido audiovisual como videos, animaciones y presentaciones para fortalecer la comunicación digital de tu negocio.",
+            "leer_mas": "LEER MÁS →"
+        },
+        {
+            "titulo": "HOSTING WEB",
+            "descripcion": "Ofrecemos servicios de hospedaje web confiables y seguros para garantizar la disponibilidad y el rendimiento de tu sitio en línea.",
+            "leer_mas": "LEER MÁS →"
+        },
+        {
+            "titulo": "PUBLICIDAD",
+            "descripcion": "Diseñamos y gestionamos campañas publicitarias estratégicas para aumentar el alcance y posicionamiento de tu empresa.",
+            "leer_mas": "LEER MÁS →"
+        }
+    ]
     },
     "contacto": {
         "titulo": "SERVICIOS DE CONSULTORÍA PROFESIONAL",
@@ -72,7 +67,7 @@
         "cards": [
             "Diseño",
             "Desarrollo",
-            "Pruebas",
+            "Eventos",
             "Marketing",
             "Branding",
             "Soporte"
@@ -84,16 +79,19 @@
         "leer_mas": "LEER MÁS",
         "miembros": [
             {
-                "nombre": "PETERSON",
-                "rol": "DESARROLLADOR"
+                "nombre": "PAOLA LOPEZ",
+                "rol": "DESARROLLADOR",
+                "img": "../images/Persona2.jpg"
             },
             {
                 "nombre": "JUAN PÉREZ",
-                "rol": "DIRECTOR GENERAL"
+                "rol": "DIRECTOR GENERAL",
+                "img": "../images/Persona1.jpg"
             },
             {
                 "nombre": "LARA EMILY",
-                "rol": "GERENTE"
+                "rol": "GERENTE",
+                "img": "../images/Persona3.jpg"
             }
         ]
     },
@@ -103,17 +101,20 @@
             {
                 "titulo": "LANZAMOS NUEVO PORTAFOLIO DIGITAL",
                 "descripcion": "Presentamos nuestro nuevo portafolio de servicios en línea, con herramientas mejoradas y contenido interactivo.",
-                "leer_mas": "LEER MÁS →"
+                "leer_mas": "LEER MÁS →",
+                "img": "../images/News3.jpg"
             },
             {
                 "titulo": "NUEVA ALIANZA ESTRATÉGICA",
                 "descripcion": "Hemos firmado una alianza con empresas locales para potenciar el alcance de nuestras soluciones digitales.",
-                "leer_mas": "LEER MÁS →"
+                "leer_mas": "LEER MÁS →",
+                "img": "../images/News2.jpg"
             },
             {
                 "titulo": "POSDATAMX EN EVENTO EMPRESARIAL",
                 "descripcion": "Participamos en el evento más importante de innovación digital de la región, compartiendo nuestra experiencia.",
-                "leer_mas": "LEER MÁS →"
+                "leer_mas": "LEER MÁS →",
+                "img": "../images/News1.jpg"
             }
         ]
     },
@@ -123,17 +124,20 @@
             {
                 "nombre": "Carlos Ramírez",
                 "rol": "Diseñador",
-                "mensaje": "El equipo de POSDATAMX nos ayudó a renovar nuestra página web y ahora recibimos muchos más clientes potenciales."
+                "mensaje": "El equipo de POSDATAMX nos ayudó a renovar nuestra página web y ahora recibimos muchos más clientes potenciales.",
+                "img":"../images/Cara2.jpg"
             },
             {
                 "nombre": "María González",
                 "rol": "Gerente de Marketing",
-                "mensaje": "Excelente atención y resultados. Sus estrategias digitales lograron mejorar nuestra presencia en redes sociales."
+                "mensaje": "Excelente atención y resultados. Sus estrategias digitales lograron mejorar nuestra presencia en redes sociales.",
+                "img":"../images/Cara3.jpg"
             },
             {
                 "nombre": "Jorge Martínez",
                 "rol": "CEO",
-                "mensaje": "Trabajar con POSDATAMX fue una gran experiencia. Cumplieron con los tiempos y la calidad del proyecto fue excepcional."
+                "mensaje": "Trabajar con POSDATAMX fue una gran experiencia. Cumplieron con los tiempos y la calidad del proyecto fue excepcional.",
+                "img":"../images/Cara1.jpg"
             }
         ]
     },

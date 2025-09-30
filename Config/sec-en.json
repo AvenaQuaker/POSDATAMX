@@ -1,0 +1,38 @@
+{
+    "nav": {
+        "titulo": "Services",
+        "menu": "Menu",
+        "fotografia": "Photography",
+        "diseno": "Design",
+        "multimedia": "Multimedia",
+        "hosting": "Web Hosting",
+        "publicidad": "Advertising"
+    },
+    "sec1":{
+        "titulo": "Professional Photography Services",
+        "descripcion": "At POSDATAMX we offer high-quality photography services to highlight the best moments of your company, products, and events. We capture images that convey professionalism, trust, and creativity.",
+        "lista": [
+        "Corporate event photography",
+        "Product catalog production",
+        "Social media sessions",
+        "Portraits and team photography",
+        "Professional editing and retouching"
+        ],
+        "boton": "Contact Us",
+        "banner": {
+            "titulo": "Capture your best moment with us!",
+            "descripcion": "Professional photography for companies, events, and campaigns."
+        }
+    },
+    "footer": {
+        "principal": "Main",
+        "links": ["Home", "About", "Services", "Team", "Contact"],
+        "servicios": "Services",
+        "servicios_links": ["Photography", "Design", "Multimedia", "Web Hosting", "Advertising"],
+        "contacto": "Contact",
+        "direccion": "Hotel Real Inn, Hamburg Hall, Av. Reforma 5430, Nuevo Laredo, Tam.",
+        "email": "email: info@posdatamx.com",
+        "tel": "tel: +52 867 123 4567",
+        "copyright": "2025 © POSDATAMX — All rights reserved"
+    }
+}

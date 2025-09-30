@@ -28,34 +28,29 @@
         "titulo": "OUR SERVICES",
         "cards": [
             {
-                "titulo": "DESIGN",
-                "descripcion": "We create attractive and functional designs that reflect your brand’s identity and improve the user experience.",
-                "leer_mas": "READ MORE →"
+            "titulo": "PHOTOGRAPHY",
+            "descripcion": "We capture the best moments of your company, products, and events with professional images that convey trust and creativity.",
+            "leer_mas": "READ MORE →"
             },
             {
-                "titulo": "DEVELOPMENT",
-                "descripcion": "We develop websites and custom applications tailored to your business needs.",
-                "leer_mas": "READ MORE →"
+            "titulo": "DESIGN",
+            "descripcion": "We create graphic and visual pieces that reflect your brand's identity and enhance its presence across different media.",
+            "leer_mas": "READ MORE →"
             },
             {
-                "titulo": "TESTING",
-                "descripcion": "We carry out quality tests to ensure the proper functioning of digital platforms and services.",
-                "leer_mas": "READ MORE →"
+            "titulo": "MULTIMEDIA",
+            "descripcion": "We produce audiovisual content such as videos, animations, and presentations to strengthen your business's digital communication.",
+            "leer_mas": "READ MORE →"
             },
             {
-                "titulo": "MARKETING",
-                "descripcion": "We design digital strategies that increase your company’s visibility and help attract more clients.",
-                "leer_mas": "READ MORE →"
+            "titulo": "WEB HOSTING",
+            "descripcion": "We provide reliable and secure web hosting services to ensure your site’s availability and performance online.",
+            "leer_mas": "READ MORE →"
             },
             {
-                "titulo": "BRANDING",
-                "descripcion": "We boost your brand’s identity with creative concepts that strengthen its recognition in the market.",
-                "leer_mas": "READ MORE →"
-            },
-            {
-                "titulo": "SUPPORT",
-                "descripcion": "We provide specialized technical support to guarantee the stability and continuity of your services.",
-                "leer_mas": "READ MORE →"
+            "titulo": "ADVERTISING",
+            "descripcion": "We design and manage strategic advertising campaigns to increase your company’s reach and market positioning.",
+            "leer_mas": "READ MORE →"
             }
         ]
     },
@@ -85,15 +80,18 @@
         "miembros": [
             {
                 "nombre": "PETERSON",
-                "rol": "DEVELOPER"
+                "rol": "DEVELOPER",
+                "img": "../images/Persona2.jpg"
             },
             {
                 "nombre": "JUAN PÉREZ",
-                "rol": "CEO"
+                "rol": "CEO",
+                "img": "../images/Persona1.jpg"
             },
             {
                 "nombre": "LARA EMILY",
-                "rol": "MANAGER"
+                "rol": "MANAGER",
+                "img": "../images/Persona3.jpg"
             }
         ]
     },
@@ -103,17 +101,20 @@
             {
                 "titulo": "WE LAUNCH NEW DIGITAL PORTFOLIO",
                 "descripcion": "We present our new portfolio of online services, with improved tools and interactive content.",
-                "leer_mas": "READ MORE →"
+                "leer_mas": "READ MORE →",
+                "img": "../images/News3.jpg"
             },
             {
                 "titulo": "NEW STRATEGIC ALLIANCE",
                 "descripcion": "We have signed an alliance with local companies to expand the reach of our digital solutions.",
-                "leer_mas": "READ MORE →"
+                "leer_mas": "READ MORE →",
+                "img": "../images/News2.jpg"
             },
             {
                 "titulo": "POSDATAMX AT BUSINESS EVENT",
                 "descripcion": "We participated in the region’s most important digital innovation event, sharing our expertise.",
-                "leer_mas": "READ MORE →"
+                "leer_mas": "READ MORE →",
+                "img": "../images/News1.jpg"
             }
         ]
     },
@@ -123,17 +124,20 @@
             {
                 "nombre": "Carlos Ramirez",
                 "rol": "Designer",
-                "mensaje": "The POSDATAMX team helped us renew our website, and now we are receiving many more potential clients."
+                "mensaje": "The POSDATAMX team helped us renew our website, and now we are receiving many more potential clients.",
+                "img":"../images/Cara2.jpg"
             },
             {
                 "nombre": "Maria Gonzalez",
                 "rol": "Marketing Manager",
-                "mensaje": "Excellent service and results. Their digital strategies improved our social media presence significantly."
+                "mensaje": "Excellent service and results. Their digital strategies improved our social media presence significantly.",
+                "img":"../images/Cara3.jpg"
             },
             {
                 "nombre": "Jorge Martinez",
                 "rol": "CEO",
-                "mensaje": "Working with POSDATAMX was a great experience. They met deadlines, and the quality of the project was outstanding."
+                "mensaje": "Working with POSDATAMX was a great experience. They met deadlines, and the quality of the project was outstanding.",
+                "img":"../images/Cara1.jpg"
             }
         ]
     },
@@ -173,3 +177,4 @@
         "copyright": "2025 © All Rights Reserved"
     }
 }
+
