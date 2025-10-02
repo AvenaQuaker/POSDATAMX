@@ -5,23 +5,112 @@
         "fotografia": "Fotografía",
         "diseno": "Diseño",
         "multimedia": "Multimedia",
-        "hosting": "Hosting Web",
-        "publicidad": "Publicidad"
+        "web": "Servicios-Web",
+        "marketing": "Marketing"
     },
-    "sec1":{
+    "fotografia": {
+        "fondo": "/images/Sec1.jpg",
         "titulo": "Servicios de Fotografía Profesional",
         "descripcion": "En POSDATAMX ofrecemos servicios de fotografía de alta calidad para resaltar los mejores momentos de tu empresa, tus productos y tus eventos. Capturamos imágenes que transmiten profesionalismo, confianza y creatividad.",
         "lista": [
-        "Fotografía de eventos corporativos",
-        "Producción de catálogos de productos",
-        "Sesiones para redes sociales",
-        "Retratos y fotografía de equipo",
-        "Edición y retoque profesional"
+            "Fotografía de eventos corporativos",
+            "Producción de catálogos de productos",
+            "Sesiones para redes sociales",
+            "Retratos y fotografía de equipo",
+            "Edición y retoque profesional"
         ],
-        "boton":"Contáctanos",
+        "fotos": [
+            "/images/Fotografia1.jpg",
+            "/images/Fotografia2.jpg"
+        ],
+        "boton": "Contáctanos",
         "banner": {
             "titulo": "¡Captura tu mejor momento, con nosotros!",
             "descripcion": "Fotografía profesional para empresas, eventos y campañas."
+        }
+    },
+    "diseno": {
+        "fondo": "/images/Sec2.jpg",
+        "titulo": "Servicios de Diseño Creativo",
+        "descripcion": "Nuestro equipo de diseñadores crea piezas gráficas innovadoras que transmiten la esencia de tu marca y conectan con tu audiencia. Buscamos un equilibrio entre estética y funcionalidad.",
+        "lista": [
+            "Diseño de identidad corporativa",
+            "Material gráfico para campañas publicitarias",
+            "Diseño de presentaciones y stands",
+            "Diseño de interfaces web y móviles",
+            "Adaptación de material para redes sociales"
+        ],
+        "fotos": [
+            "/images/diseno1.jpg",
+            "/images/diseno2.jpg"
+        ],
+        "boton": "Solicita tu diseño",
+        "banner": {
+            "titulo": "El diseño es la primera impresión",
+            "descripcion": "Conecta con tu público con creatividad y estilo."
+        }
+    },
+    "multimedia": {
+        "fondo": "/images/Sec3.jpg",
+        "titulo": "Producción Multimedia",
+        "descripcion": "Impulsamos tu comunicación con contenido multimedia profesional. Desde videos promocionales hasta animaciones, desarrollamos piezas que impactan y generan valor.",
+        "lista": [
+            "Producción de videos corporativos",
+            "Animaciones y motion graphics",
+            "Cobertura de eventos en vivo",
+            "Producción para redes sociales",
+            "Postproducción y edición avanzada"
+        ],
+        "fotos": [
+            "/images/multimedia1.jpg",
+            "/images/multimedia2.jpg"
+        ],
+        "boton": "Empieza tu proyecto",
+        "banner": {
+            "titulo": "El poder de lo audiovisual",
+            "descripcion": "Contenido multimedia que inspira y conecta."
+        }
+    },
+        "web": {
+        "fondo": "/images/Sec4.jpg",
+        "titulo": "Creación, programación y hosting web confiable",
+        "descripcion": "En POSDATAMX ofrecemos un servicio integral para tu presencia digital: desde la creación de sitios web atractivos y funcionales, hasta el desarrollo de aplicaciones personalizadas y un hosting seguro que garantiza la disponibilidad de tu negocio en línea.",
+        "lista": [
+            "Diseño y desarrollo de sitios web a medida",
+            "Programación de aplicaciones web personalizadas",
+            "Hosting seguro y de alto rendimiento",
+            "Certificados SSL y medidas de seguridad avanzadas",
+            "Soporte técnico y mantenimiento continuo"
+        ],
+        "fotos": [
+            "/images/web1.jpg",
+            "/images/web2.jpg"
+        ],
+        "boton": "Conoce nuestros planes",
+        "banner": {
+            "titulo": "Todo lo que tu negocio necesita en la web",
+            "descripcion": "Diseño, programación y hosting en un solo lugar."
+        }
+    },
+    "marketing": {
+        "fondo": "/images/Sec5.jpg",
+        "titulo": "Publicidad y Marketing Digital",
+        "descripcion": "Creamos campañas publicitarias efectivas que aumentan la visibilidad de tu marca y atraen a más clientes en entornos digitales y físicos.",
+        "lista": [
+            "Campañas en redes sociales",
+            "Publicidad en Google Ads",
+            "Estrategias de email marketing",
+            "Marketing de contenidos",
+            "Gestión integral de campañas publicitarias"
+        ],
+        "fotos": [
+            "/images/marketing1.jpg",
+            "/images/marketing2.jpg"
+        ],
+        "boton": "Haz crecer tu marca",
+        "banner": {
+            "titulo": "Lleva tu marca al siguiente nivel",
+            "descripcion": "Publicidad estratégica para que tu negocio llegue más lejos."
         }
     },
     "footer": {

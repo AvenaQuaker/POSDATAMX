@@ -30,27 +30,32 @@
         {
             "titulo": "FOTOGRAFÍA",
             "descripcion": "Capturamos los mejores momentos de tu empresa, productos y eventos con imágenes profesionales que transmiten confianza y creatividad.",
-            "leer_mas": "LEER MÁS →"
+            "leer_mas": "LEER MÁS →",
+            "sec": "fotografia"
         },
         {
             "titulo": "DISEÑO",
             "descripcion": "Creamos piezas gráficas y visuales que reflejan la identidad de tu marca y mejoran su presencia en diferentes medios.",
-            "leer_mas": "LEER MÁS →"
+            "leer_mas": "LEER MÁS →",
+            "sec": "diseno"
         },
         {
             "titulo": "MULTIMEDIA",
             "descripcion": "Producimos contenido audiovisual como videos, animaciones y presentaciones para fortalecer la comunicación digital de tu negocio.",
-            "leer_mas": "LEER MÁS →"
+            "leer_mas": "LEER MÁS →",
+            "sec": "multimedia"
         },
         {
-            "titulo": "HOSTING WEB",
-            "descripcion": "Ofrecemos servicios de hospedaje web confiables y seguros para garantizar la disponibilidad y el rendimiento de tu sitio en línea.",
-            "leer_mas": "LEER MÁS →"
+            "titulo": "SERVICIOS-WEB",
+            "descripcion": "Ofrecemos servicios de creacion y hospedaje web confiables y seguros para garantizar la disponibilidad y el rendimiento de tu sitio en línea.",
+            "leer_mas": "LEER MÁS →",
+            "sec": "web"
         },
         {
-            "titulo": "PUBLICIDAD",
+            "titulo": "MARKETING",
             "descripcion": "Diseñamos y gestionamos campañas publicitarias estratégicas para aumentar el alcance y posicionamiento de tu empresa.",
-            "leer_mas": "LEER MÁS →"
+            "leer_mas": "LEER MÁS →",
+            "sec": "marketing"
         }
     ]
     },

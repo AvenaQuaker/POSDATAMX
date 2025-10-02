@@ -5,23 +5,112 @@
         "fotografia": "Photography",
         "diseno": "Design",
         "multimedia": "Multimedia",
-        "hosting": "Web Hosting",
-        "publicidad": "Advertising"
+        "web": "Web-Services",
+        "marketing": "Marketing"
     },
-    "sec1":{
+    "fotografia": {
+        "fondo": "/images/Sec1.jpg",
         "titulo": "Professional Photography Services",
-        "descripcion": "At POSDATAMX we offer high-quality photography services to highlight the best moments of your company, products, and events. We capture images that convey professionalism, trust, and creativity.",
+        "descripcion": "At POSDATAMX we offer high-quality photography services to highlight the best moments of your company, your products, and your events. We capture images that convey professionalism, trust, and creativity.",
         "lista": [
-        "Corporate event photography",
-        "Product catalog production",
-        "Social media sessions",
-        "Portraits and team photography",
-        "Professional editing and retouching"
+            "Corporate event photography",
+            "Product catalog production",
+            "Social media sessions",
+            "Team and portrait photography",
+            "Professional editing and retouching"
         ],
-        "boton": "Contact Us",
+        "fotos": [
+            "/images/Fotografia1.jpg",
+            "/images/Fotografia2.jpg"
+        ],
+        "boton": "Contact us",
         "banner": {
             "titulo": "Capture your best moment with us!",
-            "descripcion": "Professional photography for companies, events, and campaigns."
+            "descripcion": "Professional photography for businesses, events, and campaigns."
+        }
+    },
+    "diseno": {
+        "fondo": "/images/Sec2.jpg",
+        "titulo": "Creative Design Services",
+        "descripcion": "Our design team creates innovative graphic pieces that communicate your brand’s essence and connect with your audience. We balance aesthetics with functionality.",
+        "lista": [
+            "Corporate identity design",
+            "Graphic materials for advertising campaigns",
+            "Presentation and stand design",
+            "Web and mobile interface design",
+            "Adaptation of materials for social media"
+        ],
+        "fotos": [
+            "/images/diseno1.jpg",
+            "/images/diseno2.jpg"
+        ],
+        "boton": "Request your design",
+        "banner": {
+            "titulo": "Design is the first impression",
+            "descripcion": "Connect with your audience through creativity and style."
+        }
+    },
+    "multimedia": {
+        "fondo": "/images/Sec3.jpg",
+        "titulo": "Multimedia Production",
+        "descripcion": "We boost your communication with professional multimedia content. From promotional videos to animations, we create pieces that make an impact and deliver value.",
+        "lista": [
+            "Corporate video production",
+            "Animations and motion graphics",
+            "Live event coverage",
+            "Content production for social media",
+            "Advanced post-production and editing"
+        ],
+        "fotos": [
+            "/images/multimedia1.jpg",
+            "/images/multimedia2.jpg"
+        ],
+        "boton": "Start your project",
+        "banner": {
+            "titulo": "The power of audiovisuals",
+            "descripcion": "Multimedia content that inspires and connects."
+        }
+    },
+        "web": {
+        "fondo": "/images/Sec4.jpg",
+        "titulo": "Reliable web creation, development, and hosting",
+        "descripcion": "At POSDATAMX we provide a complete service for your digital presence: from creating attractive and functional websites, to developing custom applications and secure hosting that ensures your business is always online.",
+        "lista": [
+            "Custom website design and development",
+            "Tailored web application programming",
+            "Secure and high-performance hosting",
+            "SSL certificates and advanced security measures",
+            "Ongoing technical support and maintenance"
+        ],
+        "fotos": [
+            "/images/web1.jpg",
+            "/images/web2.jpg"
+        ],
+        "boton": "Explore our plans",
+        "banner": {
+            "titulo": "Everything your business needs online",
+            "descripcion": "Design, development, and hosting in one place."
+        }
+    },
+    "marketing": {
+        "fondo": "/images/Sec5.jpg",
+        "titulo": "Advertising and Digital Marketing",
+        "descripcion": "We create effective advertising campaigns that increase your brand’s visibility and attract more customers in both digital and physical spaces.",
+        "lista": [
+            "Social media campaigns",
+            "Google Ads advertising",
+            "Email marketing strategies",
+            "Content marketing",
+            "Comprehensive campaign management"
+        ],
+        "fotos": [
+            "/images/marketing1.jpg",
+            "/images/marketing2.jpg"
+        ],
+        "boton": "Grow your brand",
+        "banner": {
+            "titulo": "Take your brand to the next level",
+            "descripcion": "Strategic advertising to help your business reach further."
         }
     },
     "footer": {

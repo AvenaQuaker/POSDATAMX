@@ -11,5 +11,13 @@
     --font-Fredoka: 'Fredoka', sans-serif;
     --font-TiltWarp: 'Tilt Warp', sans-serif;
     --font-Montserrat: 'Montserrat', sans-serif;
+    --engineering-orange: #cc000aff;
+    /* Paleta de Colores */
+    --night: #141414ff;
+    --eblack: #202020ff;
+    --fgray: #d1d5dcff;
+    --antiwhite: #e5e7ebff;
+    --white: #ffffffff;
 }
+
 
