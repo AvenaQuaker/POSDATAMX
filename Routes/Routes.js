@@ -1,7 +1,7 @@
 import { Router } from "express";
-import langs from "../Utils/translations.js";
 import { detectLanguage } from "../Middlewares/Lang.js";
-
+import { getMainPage } from "../Utils/mainPage.js";
+import { getSectionPage } from "../Utils/sectionPage.js";
 
 const router = Router();
 
@@ -10,33 +10,30 @@ router.get("/Servicios", (req, res) => {
     return res.redirect(`/Servicios/${lang}/fotografia`);
 });
 
-router.get("/Servicios/:lang/:seccion?", (req, res) => {
+router.get("/Servicios/:lang/:seccion?", async (req, res) => {
     const lang = req.params.lang.toLowerCase();
     const seccion = req.params.seccion || "fotografia";
 
-    if (!langs.sec_translations[lang]) {
+    const sectionData = await getSectionPage(lang, seccion)
+
+    if (!sectionData) {
         const detected = detectLanguage(req);
         return res.redirect(`/Servicios/${detected}/${seccion}`);
     }
 
-    let text = {
-        nav: langs.sec_translations[lang].nav,
-        sec: langs.sec_translations[lang][seccion],
-        footer: langs.sec_translations[lang].footer
-    }
-
-    res.render("section",{ translations:text, lang });
+    res.render("section",{ translations:sectionData, lang });
 });
 
-router.get("/:lang", (req, res) => {
+router.get("/:lang", async (req, res) => {
     const lang = req.params.lang.toLowerCase();
+    const pageData = await getMainPage(lang);
 
-    if (!langs.translations[lang]) {
+    if(!pageData){
         const detected = detectLanguage(req);
         return res.redirect(`/${detected}`);
     }
 
-    res.render("index", { translations: langs.translations[lang], lang });
+    res.render("index", { translations: pageData, lang });
 });
 
 

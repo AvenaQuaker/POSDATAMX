@@ -1,3 +1,5 @@
+AOS.init();
+
 const menuBtn = document.getElementById("menuBtn");
   const sideMenu = document.getElementById("sideMenu");
   const closeMenu = document.getElementById("closeMenu");
@@ -23,3 +25,27 @@ window.addEventListener("scroll", () => {
       nav.classList.add("-translate-y-full", "opacity-0");
     }
 });
+
+document.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    const response = await fetch("/enviarCorreo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre: name, email: email, mensaje: message })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        alert("✅ Tu mensaje ha sido enviado correctamente.");
+        e.target.reset();
+    } else {
+        alert("❌ Ocurrió un error al enviar tu mensaje.");
+    }
+});
+

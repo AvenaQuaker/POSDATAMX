@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POSDATAMX</title>
-		<!-- STYLESHEETS -->
-        <!--MAIN STYLESHEETS -->
         <link rel="stylesheet" href="css/mainTW.css">
+		<link rel="stylesheet" href="aos/aos.css" />
+		<script src="aos/aos.js"></script>
 </head>
 <body class="bg-sky-50 w-full h-full font-Montserrat">
 <!--================================= NAVIGATION START ==========================================-->
 <header>
 	<nav id="mainNav" 
-		class="bg-[#202020ff] fixed top-0 left-0 w-full py-3 px-4 shadow-md transition-all duration-500 -translate-y-full opacity-0 z-30">
+		class="bg-[#2b2b2b] fixed top-0 left-0 w-full py-3 px-4 shadow-md transition-all duration-500 -translate-y-full opacity-0 z-30">
 		<div class="flex justify-between items-center mx-6 lg:mx-40">
 		<!-- Logo -->
 		<img src="images/LogoBlanco.png" alt="150x50" class="h-10">
 
 		<!-- Opciones en pantallas grandes -->
 		<div class="hidden md:flex space-x-6">
-		<a id="navInicio" href="#inicio" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.inicio %></a>
-		<a id="navAcerca" href="#acerca" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.acerca %></a>
-		<a id="navServicios" href="#servicios" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.servicios %></a>
-		<a id="navEquipo" href="#equipo" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.equipo %></a>
-		<a id="navContacto" href="#contacto" class="text-gray-200 hover:underline font-semibold text-[1rem]"><%= translations.nav.contacto %></a>
+		<a id="navInicio" href="#inicio" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.inicio %></a>
+		<a id="navAcerca" href="#acerca" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.acerca %></a>
+		<a id="navServicios" href="#servicios" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.servicios %></a>
+		<a id="navEquipo" href="#equipo" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.equipo %></a>
+		<a id="navContacto" href="#contacto" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.contacto %></a>
 		</div>
 
 		<!-- Botón hamburguesa (visible en móviles) -->
@@ -57,22 +57,20 @@
 		</div>
 	</div>
 </header>
-
-<!-- Fondo oscuro cuando el menú está abierto -->
 <div id="overlay" 
 class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
 <!--================================= NAVIGATION END ==========================================-->
 <section id="inicio" class="bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/research/case_studies/concept_a/mh_cs_concept_a.jpg)] bg-fixed bg-cover h-[60rem] flex justify-center items-center">
 	<div class="bg-black/70 h-full w-[70%] lg:w-[30%] flex flex-col justify-center items-center text-center gap-4">
-		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-48">
-		<a href="#" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-blue-700"><%= translations.inicio.contactanos %></a>
+		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-48" data-aos="zoom-in">
+		<a href="#" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-red-700"><%= translations.inicio.contactanos %></a>
 	</div>
 </section>
 <!--================================= ABOUT US START ==========================================-->
 <section id="acerca" class="py-18 bg-gray-200 ">
-	<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center box-content">
-		<div class="flex flex-col items-center justify-center">
+	<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center box-content" data-aos="fade-down">
+		<div class="flex flex-col items-center justify-center" >
 		<h2 id="aboutTitulo" class="text-2xl font-bold text-gray-800 mb-4"><%= translations.acerca.titulo %></h2>
 		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
 
@@ -80,7 +78,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 			<%= translations.acerca.descripcion %>
 		</p>
 
-	<div id="aboutCaracteristicas" class="grid grid-cols-2 gap-4 mb-6 w-full">
+	<div id="aboutCaracteristicas" class="grid grid-cols-2 gap-4 mb-6 w-full"  >
 		<% translations.acerca.caracteristicas.forEach(function(c) { %>
 			<div class="flex items-center space-x-3">
 			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">
@@ -100,24 +98,22 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </section>
 <!--================================= ABOUT US END ==========================================-->
 <!--================================= OUR SERVICES ==========================================-->
-<section id="servicios" class="py-16 bg-[url('../images/WhiteBG2.jpg')] bg-fixed bg-cover">
-<div class="max-w-6xl mx-auto px-6 text-center box-content">
+<section id="servicios" class="py-16 bg-[url('../images/WhiteBG1.jpg')] bg-fixed bg-cover">
+<div class="max-w-6xl mx-auto px-6 text-center box-content " data-aos="fade-down">
 
-<!-- Título -->
 <h2 id="" class="text-3xl font-bold text-gray-800"><%= translations.servicios.titulo %></h2>
-<div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
+<div class="w-24 h-2 bg-[#d9171f] mx-auto my-4"></div>
 
-<!-- Grid de servicios -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 	<% translations.servicios.cards.forEach(function(c) { %>
 			<!-- Card -->
-			<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition">
-			<div class="w-12 h-12 bg-gray-300 mx-auto flex items-center justify-center text-sm text-gray-500 mb-4">48×</div>
+			<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition" data-aos="zoom-in">
+			<img class="w-12 h-12 my-2 mx-auto" alt="seccionImg" src="<%= c.img %>">
 			<h3 class="text-lg font-bold text-gray-800 mb-2"><%= c.titulo %></h3>
 			<p class="text-gray-600 mb-4">
 				<%= c.descripcion %>
 			</p>
-			<a href="/Servicios/<%= c.sec %>" class="text-red-600 font-semibold hover:underline text-sm tracking-wide"><%= c.leer_mas %></a>
+			<a href="/Servicios/<%= lang %>/<%= c.sec %>" class="text-red-600 font-semibold hover:underline text-sm tracking-wide"><%= c.leer_mas %></a>
 			</div>
 	<% }) %>
 </div>
@@ -125,28 +121,22 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </section>
 <!--================================= OUR SERVICES END ==========================================-->
 <!--================================= QUOTE START ==========================================-->
-<section class="py-20 bg-gray-200">
+<section class="py-20 bg-[#141414ff]">
 	<div class="max-w-6xl mx-auto box-content px-6 grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-12 items-center">
-		
-		<!-- Columna izquierda (imagsen) -->
-		<img src="images/Imagen2.jpg" alt="128x128x1" class="h-96 w-full rounded hover:scale-105 transition">
-		
-		<!-- Columna derecha (contenido) -->
-		<div>
-		<h2 class="text-2xl font-bold text-gray-800 mb-2"><%= translations.contacto.titulo %></h2>
+		<img src="images/Imagen2.jpg" alt="128x128x1" class="h-96 w-full rounded hover:scale-105 transition" data-aos="fade-right">
+		<div data-aos="fade-left">
+		<h2 class="text-2xl font-bold text-stone-100 mb-2"><%= translations.contacto.titulo %></h2>
 		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
 		
-		<p class="text-gray-600 mb-4">
+		<p class="text-gray-400 mb-4">
 			<%= translations.contacto.descripcion1 %>
 		</p>
-		<p class="text-gray-600 mb-6">
+		<p class="text-gray-400 mb-6">
 			<%= translations.contacto.descripcion2 %>
 		</p>
-		
-		<!-- Caja con mensaje y botón -->
 		<div class="rounded border border-gray-400 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
 			<div>
-			<h3 class="font-semibold text-gray-800"><%= translations.contacto.sugerencia %></p>
+			<h3 class="font-semibold text-stone-100"><%= translations.contacto.sugerencia %></p>
 			</div>
 			<a href="#"
 			class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3">
@@ -154,58 +144,43 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 			</a>
 		</div>
 		</div>
-		
 	</div>
 </section>
 <!--================================= QUOTE END ==========================================-->
 <!--================================= GALLERY START ==========================================-->
-<section class="py-16 bg-white">
-<div class="max-w-6xl mx-auto px-6 text-center box-content">
+<section class="py-16 bg-white" >
+<div class="max-w-6xl mx-auto px-6 text-center box-content" >
 
-<!-- Título -->
-<h2 class="text-3xl font-bold text-gray-800"><%= translations.galeria.titulo %></h2>
-<div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
-<!-- Grid de servicios -->
-<div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-12">
-	<!-- Card -->
+<h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down"><%= translations.galeria.titulo %></h2>
+<div class="w-24 h-2 bg-gray-300 mx-auto my-4" data-aos="fade-down"></div>
+
+<div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-12" data-aos="zoom-in">
 	<div class="relative group rounded w-full sm:col-span-2 h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen3.jpg')] bg-cover bg-center hover:scale-105 transition">
-		<!-- Overlay -->
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
 		<%= translations.galeria.cards[0] %>
 		</div>
 	</div>
-
-	<!-- Card -->
 	<div class="relative group sm:row-span-2 rounded w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen6.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
 		<%= translations.galeria.cards[1] %>
 		</div>
 	</div>
-
-	<!-- Card -->
 	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen7.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
 		<%= translations.galeria.cards[2] %>
 		</div>
 	</div>
-
-	<!-- Card -->
 	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen4.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
 		<%= translations.galeria.cards[3] %>
 		</div>
 	</div>
-
-	<!-- Card -->
 	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen5.jpg')] bg-cover bg-center hover:scale-105 transition">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
 		<%= translations.galeria.cards[4] %>
 		</div>
 	</div>
-
-	<!-- Card -->
 	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen8.jpg')] bg-cover bg-center hover:scale-105 transition">
-	
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
 		<%= translations.galeria.cards[5] %>
 		</div>
@@ -216,9 +191,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <!--======================================= TEAM START ========================================================-->
 <section id="equipo" class="py-16 bg-gray-200">
 	<div class="box-content max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12">
-		
-		<!-- Columna izquierda -->
-		<div>
+		<div data-aos="fade-right">
 		<h2 class="text-3xl font-bold text-gray-800 mb-2"><%= translations.equipo.titulo %></h2>
 		<div class="w-28 h-2 bg-gray-300 mb-6"></div>
 		<p class="text-gray-600 mb-6">
@@ -229,11 +202,8 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 			<%= translations.equipo.leer_mas %>
 		</a>
 		</div>
-
-		<!-- Columna derecha: Team Grid -->
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2" data-aos="fade-up">
 		<% translations.equipo.miembros.forEach(function(m) { %>
-			<!-- Card miembro -->
 			<div class="text-center">
 				<div style="background-image: url('<%= m.img %>');" class="w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 mb-4 bg-cover bg-center hover:scale-105 transition">
 				
@@ -247,16 +217,15 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </section>
 <!--======================================= TEAM END ========================================================-->
 <!--======================================= NEWS START ========================================================-->
-<section class="py-16 bg-[url('../images/WhiteBG2.jpg')] bg-fixed bg-cover">
+<section class="py-16 bg-[url('../images/WhiteBG1.jpg')] bg-fixed bg-cover">
 <div class="max-w-6xl mx-auto px-6 text-center box-content">
 
-<!-- Título -->
-<h2 class="text-3xl font-bold text-gray-800"><%= translations.noticias.titulo %></h2>
-<div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
-<!-- Grid de servicios -->
+<h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down"><%= translations.noticias.titulo %></h2>
+<div class="w-24 h-2 bg-red-600 mx-auto my-4" data-aos="fade-down"></div>
+
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-12">
-	<!-- Card -->
-	<div class="flex flex-col gap-1 hover:shadow-xl transition">
+
+	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
 		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
 			
 		</div>
@@ -269,8 +238,8 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 					wide mt-2"><%= translations.noticias.cards[0].leer_mas %></a>
 		</div>
 	</div>
-	<!-- Card -->
-	<div class="flex flex-col gap-1 hover:shadow-xl transition">
+
+	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
 		<div class="py-4 gap-2 flex flex-col bg-white">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[1].titulo %></h3>
 			<p class="text-gray-600 text-sm">
@@ -284,8 +253,8 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		</div>
 		
 	</div>
-	<!-- Card -->
-	<div class="flex flex-col gap-1 hover:shadow-xl transition">
+
+	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
 		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
 
 		</div>
@@ -304,15 +273,14 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <!--======================================= TESTIMONIAL START ========================================================-->
 <section class="py-16 bg-[#141414ff] text-white">
 	<div class="max-w-6xl mx-auto px-6 text-center box-content">
-		
-		<!-- Título -->
-		<h2 class="text-3xl font-bold"><%= translations.testimonios.titulo %></h2>
-		<div class="w-28 h-2 bg-gray-600 mx-auto my-4"></div>
-		<!-- Grid de testimonios -->
+
+		<h2 class="text-3xl font-bold" data-aos="fade-down"><%= translations.testimonios.titulo %></h2>
+		<div class="w-28 h-2 bg-[#d9171f] mx-auto my-4" data-aos="fade-down"></div>
+	
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
 		<% translations.testimonios.personas.forEach(function(t) { %>
-			<!-- Testimonio -->
-			<div class="flex flex-col items-center">
+	
+			<div class="flex flex-col items-center" data-aos="zoom-in-up">
 				<div style="background-image: url('<%= t.img %>')" class="bg-cover bg-center w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 mb-6">
 			
 				</div>
@@ -332,15 +300,13 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <section id="contacto" class="py-16 bg-white">
 	<div class="max-w-6xl mx-auto px-6 text-center box-content">
 		
-		<!-- Título -->
-		<h2 class="text-3xl font-bold text-gray-800"><%= translations.contactanos.titulo %></h2>
-		<div class="w-24 h-2 bg-gray-300 mx-auto my-4"></div>
-		<p class="text-gray-600 mb-8">
+		<h2 class="text-3xl font-bold text-gray-800"  data-aos="fade-down"><%= translations.contactanos.titulo %></h2>
+		<div class="w-24 h-2 bg-gray-300 mx-auto my-4"  data-aos="fade-down"></div>
+		<p class="text-gray-600 mb-8"  data-aos="fade-down">
 			<%= translations.contactanos.descripcion %>
 		</p>
 		
-		<!-- Formulario de contacto -->
-		<div class="flex flex-row gap-6">
+		<div class="flex flex-row gap-6"  data-aos="zoom-in">
 			<form class="w-full space-y-6 text-left">
 			<div>
 				<label for="name" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.nombre %></label>
@@ -365,7 +331,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </section>
 <!--======================================= CONTACT US END =======================================================-->
 <!--======================================= FOOTER START =======================================================-->
-<footer class="bg-[#202020ff] text-gray-300 pt-12">
+<footer class="bg-[#2b2b2b] text-gray-300 pt-12">
 	<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr_0.5fr_1.5fr] gap-8">
 		
 		<!-- Logo + Social -->
@@ -390,21 +356,21 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		<!-- Address -->
 		<div>
 		<h3 class="text-white font-semibold mb-4"><%= translations.footer.direccion %></h3>
-		<p class="flex items-start mb-2"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span><%= translations.footer.direccion1 %></p>
-		<p class="flex items-start mb-2"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span><%= translations.footer.correo %></p>
-		<p class="flex items-start"><span class="w-6 h-6 bg-gray-600 mr-2 flex items-center justify-center text-xs">32</span><%= translations.footer.telefono %></p>
+		<p class="flex items-start mb-2 text-[13px]"><img src="/icons/addIcon.svg" class="w-6 h-6 mx-2"><%= translations.footer.direccion1 %></p>
+		<p class="flex items-start mb-2 text-[13px]"><img src="/icons/emailIcon.svg" class="w-6 h-6 mx-2"><%= translations.footer.correo %></p>
+		<p class="flex items-start text-[13px]"><img src="/icons/phoneIcon.svg" class="w-6 h-6 mx-2"><%= translations.footer.telefono %></p>
 		</div>
 		
 		<!-- Site Links -->
 		<div>
 		<h3 class="text-white font-semibold mb-4"><%= translations.footer.enlaces %></h3>
 		<ul class="space-y-2">
-			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace1 %></a></li>
-			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace2 %></a></li>
-			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace3 %></a></li>
-			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace4 %></a></li>
-			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace5 %></a></li>
-			<li><a href="#" class="hover:text-white text-[14px]"><%= translations.footer.enlace6 %></a></li>
+			<li><a href="/Servicios/<%= lang %>" class="hover:text-white text-[14px]"><%= translations.footer.enlace1 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/fotografia" class="hover:text-white text-[14px]"><%= translations.footer.enlace2 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/diseno" class="hover:text-white text-[14px]"><%= translations.footer.enlace3 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/multimedia" class="hover:text-white text-[14px]"><%= translations.footer.enlace4 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/web" class="hover:text-white text-[14px]"><%= translations.footer.enlace5 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/marketing" class="hover:text-white text-[14px]"><%= translations.footer.enlace6 %></a></li>
 		</ul>
 		</div>
 		
@@ -412,13 +378,13 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		<div>
 		<h3 class="text-white font-semibold mb-4"><%= translations.footer.post_reciente %></h3>
 		<div class="flex items-start mb-4">
-			<div class="w-20 h-16 bg-gray-500 flex items-center justify-center text-xs text-gray-200 mr-3">100×80</div>
+			<img src="/icons/postIcon.svg" class="w-20 h-16 flex items-center justify-center text-xs text-gray-200 mr-3">
 			<div>
 				<p class="text-sm" id="t-footer-post1-descripcion"><%= translations.footer.post1.descripcion %></p>
 				<p class="text-xs text-gray-400 mt-1"> <span id="t-footer-post1-fecha"><%= translations.footer.post1.fecha %></span> • <span class="text-red-500" id="t-footer-post1-autor"><%= translations.footer.autor %></span></p>			</div>
 		</div>
 		<div class="flex items-start">
-			<div class="w-20 h-16 bg-gray-500 flex items-center justify-center text-xs text-gray-200 mr-3">100×80</div>
+			<img src="/icons/postIcon.svg" class="w-20 h-16 flex items-center justify-center text-xs text-gray-200 mr-3">
 			<div>
 				<p class="text-sm" id="t-footer-post2-descripcion"><%= translations.footer.post2.descripcion %></p>
 				<p class="text-xs text-gray-400 mt-1"> <span id="t-footer-post2-fecha"><%= translations.footer.post2.fecha %></span> • <span class="text-red-500" id="t-footer-post2-autor"><%= translations.footer.autor %></span></p>			</div>
