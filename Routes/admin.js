@@ -34,7 +34,7 @@ router.get("/logout", (req, res) => {
             console.error("Error al cerrar sesión:", err);
             return res.status(500).send("Error al cerrar sesión");
         }
-        res.redirect("/admin/login");
+        res.redirect("/");
     });
 });
 
@@ -50,7 +50,7 @@ router.get("/modulo", requireLogin, (req, res) => {
 router.get("/get/main/:lang", requireLogin, async (req, res) => {
     try {
         const lang = req.params.lang.toLowerCase();
-        const data = await MainPage.findOne({ doc: lang }).lean();
+        const data = await MainPage.findOne({ doc: `${lang}` }).select('-_id -doc').lean();
         if (!data) return res.status(404).json({ error: "Documento no encontrado" });
         res.json(data);
     } catch (error) {
@@ -62,7 +62,7 @@ router.get("/get/main/:lang", requireLogin, async (req, res) => {
 router.get("/get/section/:lang", requireLogin, async (req, res) => {
     try {
         const lang = req.params.lang.toLowerCase();
-        const data = await SectionPage.findOne({ doc: `sec-${lang}` }).lean();
+        const data = await SectionPage.findOne({ doc: `sec-${lang}` }).select('-_id -doc').lean();
         if (!data) return res.status(404).json({ error: "Documento no encontrado" });
         res.json(data);
     } catch (error) {

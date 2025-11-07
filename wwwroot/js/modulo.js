@@ -1,36 +1,107 @@
-document.addEventListener("DOMContentLoaded", async () => {
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const editorEs = new JSONEditor(document.getElementById('es'), {
+        mode: 'tree',
+        modes: ['tree', 'code'],
+        mainMenuBar: false,
+    });
+
+    const editorEn = new JSONEditor(document.getElementById('en'), {
+        mode: 'tree',
+        modes: ['tree', 'code'],
+        mainMenuBar: false,
+    });
+
+    const editorSecEs = new JSONEditor(document.getElementById('secEs'), {
+        mode: 'tree',
+        modes: ['tree', 'code'],
+        mainMenuBar: false,
+    });
+
+    const editorSecEn = new JSONEditor(document.getElementById('secEn'), {
+        mode: 'tree',
+        modes: ['tree', 'code'],
+        mainMenuBar: false,
+    });
+
     try {
-        const [mainEs, mainEn, secEs, secEn] = await Promise.all([
-            fetch("/admin/get/main/es").then(res => res.json()),
-            fetch("/admin/get/main/en").then(res => res.json()),
-            fetch("/admin/get/section/es").then(res => res.json()),
-            fetch("/admin/get/section/en").then(res => res.json())
+        const [resEs, resEn, resSecEs, resSecEn] = await Promise.all([
+        fetch('/admin/get/main/es'),
+        fetch('/admin/get/main/en'),
+        fetch('/admin/get/section/es'),
+        fetch('/admin/get/section/en')
         ]);
 
-        document.getElementById("es").value = JSON.stringify(mainEs, null, 4);
-        document.getElementById("en").value = JSON.stringify(mainEn, null, 4);
-        document.getElementById("secEs").value = JSON.stringify(secEs, null, 4);
-        document.getElementById("secEn").value = JSON.stringify(secEn, null, 4);
+        const [dataEs, dataEn, dataSecEs, dataSecEn] = await Promise.all([resEs.json(), resEn.json(), resSecEs.json(), resSecEn.json()]);
+
+        editorEs.set(dataEs);
+        editorEn.set(dataEn);
+        editorSecEs.set(dataSecEs);
+        editorSecEn.set(dataSecEn);
 
     } catch (error) {
-        console.error("Error al cargar los datos:", error);
+        console.error('Error al cargar contenido:', error);
         Swal.fire({
-            icon: "error",
-            title: "Error al cargar",
-            text: "No se pudieron obtener los datos del servidor."
+        icon: 'error',
+        title: 'Error de carga',
+        text: 'No se pudo obtener el contenido desde el servidor.',
         });
-    }
+}
+
+  // Guardar cambios al presionar el botón
+document.getElementById('saveBtn').addEventListener('click', async () => {
+        try {
+        const updatedEs = editorEs.get();
+        const updatedEn = editorEn.get();
+        const updatedSecEs = editorSecEs.get();
+        const updatedSecEn = editorSecEn.get();
+
+        const res = await fetch('/admin/update/all', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ mainEs: updatedEs, mainEn: updatedEn, secEs: updatedSecEs, secEn: updatedSecEn })
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+            Swal.fire({
+            icon: 'success',
+            title: 'Guardado',
+            text: 'Los cambios fueron aplicados correctamente.',
+            timer: 1500,
+            showConfirmButton: false,
+            });
+
+            setTimeout(() => {
+                window.location.href = "/admin/logout"
+            }, 1500);
+
+        } else {
+            Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: data.error || 'No se pudo guardar.',
+            });
+        }
+
+        } catch (error) {
+        console.error('Error al guardar:', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error de conexión',
+            text: 'No se pudo conectar con el servidor.',
+        });
+        }
+    });
 });
-
-
 
 function cambiarDoc() {
     const inputs = document.querySelectorAll("#selec input");
     const lang = document.getElementById("lang").checked ? "En" : "Es";
-    const textos = document.querySelectorAll("#textos textarea");
+    const textos = document.querySelectorAll("#textos .json");
 
     const seleccionado = Array.from(inputs).find(input => input.checked)?.id;
-
     if (!seleccionado) return; 
 
     const idVisible = seleccionado === "main" ? lang.toLowerCase() : `sec${lang}`;
@@ -41,66 +112,4 @@ function cambiarDoc() {
         texto.classList.toggle("hidden", texto.id !== idVisible);
     })
 
-}
-
-
-async function saveChanges() {
-    const textos = {
-        mainEs: document.getElementById("es").value.trim(),
-        mainEn: document.getElementById("en").value.trim(),
-        secEs: document.getElementById("secEs").value.trim(),
-        secEn: document.getElementById("secEn").value.trim()
-    };
-
-    const parsedData = {};
-    try {
-        for (const [key, value] of Object.entries(textos)) {
-            parsedData[key] = JSON.parse(value);
-        }
-    } catch (err) {
-        Swal.fire({
-            icon: 'error',
-            title: 'JSON inválido',
-            text: 'Verifica la sintaxis de los campos antes de guardar.',
-        });
-        return;
-    }
-
-    try {
-        const res = await fetch('/admin/update/all', {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(parsedData)
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Cambios guardados',
-                text: 'Los datos se actualizaron correctamente.',
-                timer: 1500,
-                showConfirmButton: false
-            });
-
-        setTimeout(() => {
-            window.location.href = "/admin/logout"
-        }, 1500);
-
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: data.error || 'No se pudo guardar la información.',
-            });
-        }
-    } catch (error) {
-        console.error('Error al guardar:', error);
-        Swal.fire({
-            icon: 'error',
-            title: 'Error de conexión',
-            text: 'No se pudo conectar con el servidor.',
-        });
-    }
 }

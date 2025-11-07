@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const mainPageSchema = new Schema({
-    doc: { type: String, required: true, unique: true },
+    doc: { type: String, required: true, unique: true, unique: true, inmutable: true },
     nav: { type: Object },
     inicio: { type: Object },
     acerca: { type: Object },

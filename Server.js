@@ -36,6 +36,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, "./wwwroot")));
 app.use('/aos', express.static('./node_modules/aos/dist'));
 app.use('/sweetalert2', express.static('./node_modules/sweetalert2/dist'));
+app.use('/json', express.static('./node_modules/jsoneditor/dist'));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./Views"));

@@ -3,6 +3,7 @@
 <head>
     <title>Panel de administración</title>
     <link rel="stylesheet" href="/css/moduloTW.css">
+    <link rel="stylesheet" href="/json/jsoneditor.css">
     <script src="/sweetalert2/sweetalert2.all.js"></script>
     </head>
     <body
@@ -44,14 +45,19 @@
             </div>
         </div>
         </div>
-        <main class="w-full flex flex-col font-medium justify-center items-center gap-5" id="textos"> 
-            <textarea id="es" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh]">MAIN ES</textarea>
-            <textarea id="en" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] hidden">MAIN EN</textarea>
-            <textarea id="secEs" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] hidden">SEC ES</textarea>
-            <textarea id="secEn" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] hidden">SEC EN</textarea>
+        <main class="w-full flex flex-col font-medium justify-center items-center gap-5" id="textos">
+            <div id="es" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] json"></div>
+            <div id="en" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] json hidden"></div>
+            <div id="secEs"  class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] json hidden"></div>
+            <div id="secEn" class="bg-blue-400 rounded p-3 text-stone-800 w-full h-[70dvh] json hidden"></div>
+
+            <button id="saveBtn"
+                class="bg-red-900 p-3 text-gray-300 font-semibold w-fit rounded">
+                💾 Guardar cambios
+            </button>
         </main>
-        <button onclick="saveChanges()" class="bg-red-900 p-3 text-gray-300 font-semibold w-fit rounded ">Guardar cambios</button>
     </section>
+    <script src="/json/jsoneditor.js"></script>
     <script src="/js/modulo.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@
         "express-session": "^1.18.2",
         "fs": "^0.0.1-security",
         "https": "^1.0.0",
+        "jsoneditor": "^10.4.2",
         "mongoose": "^8.19.2",
         "passport": "^0.7.0",
         "passport-google-oauth20": "^2.0.0",

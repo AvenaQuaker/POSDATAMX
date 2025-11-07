@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const sectionSchema = new Schema({
-    doc: { type: String, required: true }, 
+    doc: { type: String, required: true, unique: true, inmutable: true }, 
     nav: { type: Object },
     fotografia: { type: Object },
     diseno: { type: Object },
