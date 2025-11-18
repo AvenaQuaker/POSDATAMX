@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="<%= lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSDATAMX</title>
+        <link rel="stylesheet" href="css/mainTW.css">
+		<link rel="stylesheet" href="aos/aos.css" />
+		<script src="aos/aos.js"></script>
+</head>
+<body class="bg-sky-50 w-full h-full font-Montserrat">
+<!--================================= NAVIGATION START ==========================================-->
+<header>
+	<nav id="mainNav" 
+		class="bg-[#2b2b2b] fixed top-0 left-0 w-full py-3 px-4 shadow-md transition-all duration-500 -translate-y-full opacity-0 z-30">
+		<div class="flex justify-between items-center mx-6 lg:mx-40">
+		<!-- Logo -->
+		<img src="images/LogoBlanco.png" alt="150x50" class="h-10">
+
+		<!-- Opciones en pantallas grandes -->
+		<div class="hidden md:flex space-x-6">
+		<a id="navInicio" href="#inicio" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.inicio %></a>
+		<a id="navAcerca" href="#acerca" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.acerca %></a>
+		<a id="navServicios" href="#servicios" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.servicios %></a>
+		<a id="navEquipo" href="#equipo" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.equipo %></a>
+		<a id="navContacto" href="#contacto" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.contacto %></a>
+		</div>
+
+		<!-- Botón hamburguesa (visible en móviles) -->
+		<button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+			<!-- ícono hamburguesa -->
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</button>
+		</div>
+	</nav>
+
+	<!-- Menú lateral (off-canvas) -->
+	<div id="sideMenu" 
+		class="fixed top-0 right-0 w-64 h-full bg-stone-50 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+		<div class="flex justify-between items-center p-4 border-b">
+		<span class="font-bold text-gray-800">Menú</span>
+		<!-- Botón cerrar -->
+		<button id="closeMenu" class="text-gray-700">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+			</svg>
+		</button>
+		</div>
+		<div class="flex flex-col p-6 space-y-4">
+		<a id="menuInicio" href="#inicio" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.inicio %></a>
+		<a id="menuAcerca" href="#acerca" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.acerca %></a>
+		<a id="menuServicios" href="#servicios" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.servicios %></a>
+		<a id="menuEquipo" href="#equipo" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.equipo %></a>
+		<a id="menuContacto" href="#contacto" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.contacto %></a>
+		</div>
+	</div>
+</header>
+<div id="overlay" 
+class="fixed inset-0 bg-black/50 hidden z-40"></div>
+
+<!--================================= NAVIGATION END ==========================================-->
+<section id="inicio" class="bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/research/case_studies/concept_a/mh_cs_concept_a.jpg)] bg-fixed bg-cover h-[60rem] flex justify-center items-center">
+	<div class="bg-black/70 h-full w-[70%] lg:w-[30%] flex flex-col justify-center items-center text-center gap-4">
+		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-48" data-aos="zoom-in">
+		<a href="#" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-red-700"><%= translations.inicio.contactanos %></a>
+	</div>
+</section>
+<!--================================= ABOUT US START ==========================================-->
+<section id="acerca" class="py-18 bg-gray-200 ">
+	<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center box-content" data-aos="fade-down">
+		<div class="flex flex-col items-center justify-center" >
+		<h2 id="aboutTitulo" class="text-2xl font-bold text-gray-800 mb-4"><%= translations.acerca.titulo %></h2>
+		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
+
+		<p id="aboutDescripcion" class="text-gray-600 mb-6 text-[14px]">
+			<%= translations.acerca.descripcion %>
+		</p>
+
+	<div id="aboutCaracteristicas" class="grid grid-cols-2 gap-4 mb-6 w-full"  >
+		<% translations.acerca.caracteristicas.forEach(function(c) { %>
+			<div class="flex items-center space-x-3">
+			<div class="w-10 h-10 bg-gray-300 flex items-center justify-center text-sm font-bold text-gray-500">
+				*
+			</div>
+			<span class="font-semibold text-gray-700"><%= c %></span>
+			</div>
+		<% }) %>
+	</div>
+
+		<a href="#" id="aboutLeer" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">
+			<%= translations.acerca.leer_mas %>
+		</a>
+		</div>
+		<img src="images/Imagen1.jpg" alt="128x128x1" class="h-[25rem] w-full rounded bg-cover bg-center hover:scale-105 transition">
+	</div>
+</section>
+<!--================================= ABOUT US END ==========================================-->
+<!--================================= OUR SERVICES ==========================================-->
+<section id="servicios" class="py-16 bg-[url('../images/WhiteBG1.jpg')] bg-fixed bg-cover">
+<div class="max-w-6xl mx-auto px-6 text-center box-content " data-aos="fade-down">
+
+<h2 id="" class="text-3xl font-bold text-gray-800"><%= translations.servicios.titulo %></h2>
+<div class="w-24 h-2 bg-[#d9171f] mx-auto my-4"></div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+	<% translations.servicios.cards.forEach(function(c) { %>
+			<!-- Card -->
+			<div class="rounded-xl border bg-white border-gray-200 p-8 hover:shadow-lg transition" data-aos="zoom-in">
+			<img class="w-12 h-12 my-2 mx-auto" alt="seccionImg" src="<%= c.img %>">
+			<h3 class="text-lg font-bold text-gray-800 mb-2"><%= c.titulo %></h3>
+			<p class="text-gray-600 mb-4">
+				<%= c.descripcion %>
+			</p>
+			<a href="/Servicios/<%= lang %>/<%= c.sec %>" class="text-red-600 font-semibold hover:underline text-sm tracking-wide"><%= c.leer_mas %></a>
+			</div>
+	<% }) %>
+</div>
+</div>
+</section>
+<!--================================= OUR SERVICES END ==========================================-->
+<!--================================= QUOTE START ==========================================-->
+<section class="py-20 bg-[#141414ff]">
+	<div class="max-w-6xl mx-auto box-content px-6 grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-12 items-center">
+		<img src="images/Imagen2.jpg" alt="128x128x1" class="h-96 w-full rounded hover:scale-105 transition" data-aos="fade-right">
+		<div data-aos="fade-left">
+		<h2 class="text-2xl font-bold text-stone-100 mb-2"><%= translations.contacto.titulo %></h2>
+		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
+		
+		<p class="text-gray-400 mb-4">
+			<%= translations.contacto.descripcion1 %>
+		</p>
+		<p class="text-gray-400 mb-6">
+			<%= translations.contacto.descripcion2 %>
+		</p>
+		<div class="rounded border border-gray-400 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+			<div>
+			<h3 class="font-semibold text-stone-100"><%= translations.contacto.sugerencia %></p>
+			</div>
+			<a href="#"
+			class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3">
+			<%= translations.contacto.cotizar %>
+			</a>
+		</div>
+		</div>
+	</div>
+</section>
+<!--================================= QUOTE END ==========================================-->
+<!--================================= GALLERY START ==========================================-->
+<section class="py-16 bg-white" >
+<div class="max-w-6xl mx-auto px-6 text-center box-content" >
+
+<h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down"><%= translations.galeria.titulo %></h2>
+<div class="w-24 h-2 bg-gray-300 mx-auto my-4" data-aos="fade-down"></div>
+
+<div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-12" data-aos="zoom-in">
+	<div class="relative group rounded w-full sm:col-span-2 h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen3.jpg')] bg-cover bg-center hover:scale-105 transition">
+		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+		<%= translations.galeria.cards[0] %>
+		</div>
+	</div>
+	<div class="relative group sm:row-span-2 rounded w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen6.jpg')] bg-cover bg-center hover:scale-105 transition">
+		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+		<%= translations.galeria.cards[1] %>
+		</div>
+	</div>
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen7.jpg')] bg-cover bg-center hover:scale-105 transition">
+		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+		<%= translations.galeria.cards[2] %>
+		</div>
+	</div>
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen4.jpg')] bg-cover bg-center hover:scale-105 transition">
+		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+		<%= translations.galeria.cards[3] %>
+		</div>
+	</div>
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen5.jpg')] bg-cover bg-center hover:scale-105 transition">
+		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+		<%= translations.galeria.cards[4] %>
+		</div>
+	</div>
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen8.jpg')] bg-cover bg-center hover:scale-105 transition">
+		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+		<%= translations.galeria.cards[5] %>
+		</div>
+	</div>
+</div>
+</section>
+<!--====================================== GALLERY END ========================================================-->
+<!--======================================= TEAM START ========================================================-->
+<section id="equipo" class="py-16 bg-gray-200">
+	<div class="box-content max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12">
+		<div data-aos="fade-right">
+		<h2 class="text-3xl font-bold text-gray-800 mb-2"><%= translations.equipo.titulo %></h2>
+		<div class="w-28 h-2 bg-gray-300 mb-6"></div>
+		<p class="text-gray-600 mb-6">
+			<%= translations.equipo.descripcion %>
+		</p>
+		<a href="#"
+			class= "hover:scale-105 transition bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded">
+			<%= translations.equipo.leer_mas %>
+		</a>
+		</div>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2" data-aos="fade-up">
+		<% translations.equipo.miembros.forEach(function(m) { %>
+			<div class="text-center">
+				<div style="background-image: url('<%= m.img %>');" class="w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 mb-4 bg-cover bg-center hover:scale-105 transition">
+				
+				</div>
+				<h3 class="font-bold text-gray-800 <%= m.nombre_mayusculas ? 'uppercase' : 'capitalize' %>"><%= m.nombre %></h3>
+				<p class="text-red-600 font-semibold text-sm mb-3"><%= m.rol %></p>
+			</div>
+		<% }) %>
+		</div>
+	</div>
+</section>
+<!--======================================= TEAM END ========================================================-->
+<!--======================================= NEWS START ========================================================-->
+<section class="py-16 bg-[url('../images/WhiteBG1.jpg')] bg-fixed bg-cover">
+<div class="max-w-6xl mx-auto px-6 text-center box-content">
+
+<h2 class="text-3xl font-bold text-gray-800" data-aos="fade-down"><%= translations.noticias.titulo %></h2>
+<div class="w-24 h-2 bg-red-600 mx-auto my-4" data-aos="fade-down"></div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-12">
+
+	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
+		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+			
+		</div>
+		<div class="py-4 gap-2 flex flex-col bg-white">
+			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[0].titulo %></h3>
+			<p class="text-gray-600 text-sm">
+				<%= translations.noticias.cards[0].descripcion %>
+			</p>
+					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
+					wide mt-2"><%= translations.noticias.cards[0].leer_mas %></a>
+		</div>
+	</div>
+
+	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
+		<div class="py-4 gap-2 flex flex-col bg-white">
+			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[1].titulo %></h3>
+			<p class="text-gray-600 text-sm">
+				<%= translations.noticias.cards[1].descripcion %>
+			</p>
+					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
+					wide mt-2"><%= translations.noticias.cards[1].leer_mas %></a>
+		</div>
+		<div style="background-image: url('<%= translations.noticias.cards[1].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+
+		</div>
+		
+	</div>
+
+	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
+		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+
+		</div>
+		<div class="py-4 gap-2 flex flex-col bg-white">
+			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[2].titulo %></h3>
+			<p class="text-gray-600 text-sm">
+				<%= translations.noticias.cards[2].descripcion %>
+			</p>
+					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
+					wide mt-2"><%= translations.noticias.cards[2].leer_mas %></a>
+		</div>
+	</div>
+</div>
+</section>
+<!--======================================= NEWS END ========================================================-->
+<!--======================================= TESTIMONIAL START ========================================================-->
+<section class="py-16 bg-[#141414ff] text-white">
+	<div class="max-w-6xl mx-auto px-6 text-center box-content">
+
+		<h2 class="text-3xl font-bold" data-aos="fade-down"><%= translations.testimonios.titulo %></h2>
+		<div class="w-28 h-2 bg-[#d9171f] mx-auto my-4" data-aos="fade-down"></div>
+	
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+		<% translations.testimonios.personas.forEach(function(t) { %>
+	
+			<div class="flex flex-col items-center" data-aos="zoom-in-up">
+				<div style="background-image: url('<%= t.img %>')" class="bg-cover bg-center w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 mb-6">
+			
+				</div>
+				<p class="text-gray-300 mb-4">
+				<%= t.mensaje %>
+				</p>
+				<p class="font-bold">
+				<%= t.nombre %> <span class="text-red-500"><%= t.rol %></span>
+				</p>
+			</div>
+		<% }) %>
+		</div>
+	</div>
+</section>
+<!--======================================= TESTIMONIAL END ========================================================-->
+<!--======================================= CONTACT US START =======================================================-->
+<section id="contacto" class="py-16 bg-white">
+	<div class="max-w-6xl mx-auto px-6 text-center box-content">
+		
+		<h2 class="text-3xl font-bold text-gray-800"  data-aos="fade-down"><%= translations.contactanos.titulo %></h2>
+		<div class="w-24 h-2 bg-gray-300 mx-auto my-4"  data-aos="fade-down"></div>
+		<p class="text-gray-600 mb-8"  data-aos="fade-down">
+			<%= translations.contactanos.descripcion %>
+		</p>
+		
+		<div class="flex flex-row gap-6"  data-aos="zoom-in">
+			<form class="w-full space-y-6 text-left">
+			<div class="flex flex-row w-full gap-2">
+				<div class="w-full">
+					<label for="name" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.nombre %></label>
+					<input type="text" id="name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+				</div>
+				<div class="w-full">
+					<label for="empresa" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.empresa %></label>
+					<input type="text" id="emp" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+				</div>
+			</div>
+			<div class="flex flex-row w-full gap-2">
+				<div class="w-full">
+					<label for="tel" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.tel %></label>
+					<input type="tel" id="tel" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+				</div>
+				<div class="w-full">
+					<label for="email" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.email %></label>
+					<input type="email" id="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+				</div>
+			</div>
+			<div>
+				<label for="message" class="block text-sm font-medium text-gray-700 mb-1"><%= translations.contactanos.form.mensaje %></label>
+				<textarea id="message" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+			</div>
+			
+			<button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded">
+				<%= translations.contactanos.form.enviar %>
+			</button>
+			</form>
+			<div style="background-image: url('../images/Contact.jpg');"class="bg-cover bg-center w-full  bg-gray-600 rounded"></div>
+        </div>
+	</div>
+</section>
+<!--======================================= CONTACT US END =======================================================-->
+<!--======================================= FOOTER START =======================================================-->
+<footer class="bg-[#2b2b2b] text-gray-300 pt-12">
+	<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr_0.5fr_1.5fr] gap-8">
+		
+		<!-- Logo + Social -->
+		<div>
+            <img src="/images/LogoBlanco.png" alt="logo" class="mb-4 h-28">
+            <div class="flex gap-3">
+            <a href="https://www.facebook.com/psdatamx" class="w-9 h-9 bg-slate-700 rounded flex items-center justify-center hover:bg-blue-500 transition">
+                <img class="invert w-5 h-5" src="/images/Facebook.svg"></img>
+            </a>
+            <a href="https://www.instagram.com/psdatamx/" class="w-9 h-9 bg-slate-700 rounded flex items-center justify-center hover:bg-pink-500 transition">
+                <img class="invert w-5 h-5" src="/images/Instagram.svg"></img>
+            </a>
+            <a href="https://www.youtube.com/channel/UC3vqV7WOo7YpzzKXJIBrZMA" class="w-9 h-9 bg-slate-700 rounded flex items-center justify-center hover:bg-red-600 transition">
+                <img class="invert w-5 h-5" src="/images/Youtube.svg"></img>
+            </a>
+            <a href="https://www.linkedin.com/company/posdata-mx/" class="w-9 h-9 bg-slate-700 rounded flex items-center justify-center hover:bg-blue-400 transition">
+                <img class="invert w-5 h-5" src="/images/Linkedin.svg"></img>
+            </a>
+            </div>
+        </div>
+		
+		<!-- Address -->
+		<div>
+		<h3 class="text-white font-semibold mb-4"><%= translations.footer.direccion %></h3>
+		<p class="flex items-start mb-2 text-[13px]"><img src="/icons/addIcon.svg" class="w-6 h-6 mx-2"><%= translations.footer.direccion1 %></p>
+		<p class="flex items-start mb-2 text-[13px]"><img src="/icons/emailIcon.svg" class="w-6 h-6 mx-2"><%= translations.footer.correo %></p>
+		<p class="flex items-start text-[13px]"><img src="/icons/phoneIcon.svg" class="w-6 h-6 mx-2"><%= translations.footer.telefono %></p>
+		</div>
+		
+		<!-- Site Links -->
+		<div>
+		<h3 class="text-white font-semibold mb-4"><%= translations.footer.enlaces %></h3>
+		<ul class="space-y-2">
+			<li><a href="/Servicios/<%= lang %>" class="hover:text-white text-[14px]"><%= translations.footer.enlace1 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/fotografia" class="hover:text-white text-[14px]"><%= translations.footer.enlace2 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/diseno" class="hover:text-white text-[14px]"><%= translations.footer.enlace3 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/multimedia" class="hover:text-white text-[14px]"><%= translations.footer.enlace4 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/web" class="hover:text-white text-[14px]"><%= translations.footer.enlace5 %></a></li>
+			<li><a href="/Servicios/<%= lang %>/marketing" class="hover:text-white text-[14px]"><%= translations.footer.enlace6 %></a></li>
+		</ul>
+		</div>
+		
+		<!-- Recent Post -->
+		<div>
+		<h3 class="text-white font-semibold mb-4"><%= translations.footer.post_reciente %></h3>
+		<div class="flex items-start mb-4">
+			<img src="/icons/postIcon.svg" class="w-20 h-16 flex items-center justify-center text-xs text-gray-200 mr-3">
+			<div>
+				<p class="text-sm" id="t-footer-post1-descripcion"><%= translations.footer.post1.descripcion %></p>
+				<p class="text-xs text-gray-400 mt-1"> <span id="t-footer-post1-fecha"><%= translations.footer.post1.fecha %></span> • <span class="text-red-500" id="t-footer-post1-autor"><%= translations.footer.autor %></span></p>			</div>
+		</div>
+		<div class="flex items-start">
+			<img src="/icons/postIcon.svg" class="w-20 h-16 flex items-center justify-center text-xs text-gray-200 mr-3">
+			<div>
+				<p class="text-sm" id="t-footer-post2-descripcion"><%= translations.footer.post2.descripcion %></p>
+				<p class="text-xs text-gray-400 mt-1"> <span id="t-footer-post2-fecha"><%= translations.footer.post2.fecha %></span> • <span class="text-red-500" id="t-footer-post2-autor"><%= translations.footer.autor %></span></p>			</div>
+		</div>
+		</div>
+		
+	</div>
+	
+	<div class="bg-black text-center text-gray-200 text-sm py-4 mt-8" id="footerCopy">
+        <%= translations.footer.copyright %>
+</div>
+</footer>
+<!--======================================= FOOTER END =======================================================-->
+</body>
+
+<div id="chatButton"
+  class="fixed bottom-6 right-6 bg-red-600 hover:bg-red-700 text-white rounded-full w-14 h-14 
+  flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M2.25 12.75c0 1.25.25 2.45.7 3.54A8.97 8.97 0 0012 21c1.9 0 3.67-.6 5.13-1.63L21.75 21 20 16.13A9 9 0 1012 3c-4.97 0-9 4.03-9 9z" />
+  </svg>
+</div>
+<div id="chatWindow"
+	class="fixed bottom-24 right-6 bg-white w-80 h-96 rounded-lg shadow-2xl border border-gray-200 flex flex-col overflow-hidden hidden">
+	
+	<div class="bg-red-600 text-white p-3 flex justify-between items-center">
+		<span class="font-semibold">Soporte POSDATAMX</span>
+		<button id="closeChat" class="hover:text-gray-200">✕</button>
+	</div>
+
+	<div id="chatMessages" class="flex-1 p-3 overflow-y-auto text-sm space-y-2 bg-gray-50">
+		<div class="bg-gray-200 text-gray-800 p-2 rounded-lg w-max max-w-[80%]">
+		¡Hola! 👋 Soy tu asistente virtual de POSDATAMX.<br>
+		¿En qué puedo ayudarte hoy?
+		</div>
+	</div>
+
+	<div class="p-3 border-t flex items-center bg-white">
+		<input id="chatInput" type="text"
+		placeholder="Escribe un mensaje..."
+		class="flex-1 border border-gray-300 rounded-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500" />
+		<button id="sendBtn"
+		class="ml-2 bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+		➤
+		</button>
+	</div>
+</div>
+<script src="./js/main.js"></script>
+</html>

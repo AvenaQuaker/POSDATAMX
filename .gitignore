@@ -1,0 +1,19 @@
+# Node
+node_modules/
+
+# WhatsApp Web JS auth session
+.wwebjs_auth/
+.wwebjs_cache/
+.session/
+.sessions/
+
+# Puppeteer / Chromium
+puppeteer/
+chrome/
+chromium/
+
+# OS
+.DS_Store
+
+# Env
+.env
