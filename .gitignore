@@ -1,16 +1,18 @@
 # Node
 node_modules/
+.pnp/
+.pnp.js
+
+# Puppeteer
+**/puppeteer/
+**/puppeteer-core/
+**/.local-chromium/
 
 # WhatsApp Web JS auth session
 .wwebjs_auth/
 .wwebjs_cache/
 .session/
 .sessions/
-
-# Puppeteer / Chromium
-puppeteer/
-chrome/
-chromium/
 
 # OS
 .DS_Store
