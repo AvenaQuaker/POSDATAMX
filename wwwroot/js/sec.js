@@ -76,7 +76,7 @@ document.getElementById("btnForm").addEventListener("click",()=>{
     width: '50rem',
     background: '#fff',
     preConfirm: () => {
-    // Captura los datos del formulario antes de cerrar
+
     const name = document.getElementById('name').value.trim();
     const emp = document.getElementById('emp').value.trim();
     const tel = document.getElementById('tel').value.trim();
@@ -95,7 +95,6 @@ document.getElementById("btnForm").addEventListener("click",()=>{
     const data = result.value;
     console.log('Datos enviados:', data);
 
-    // Aquí puedes enviar los datos con fetch:
     fetch('/enviarCorreo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -120,3 +119,56 @@ document.getElementById("btnForm").addEventListener("click",()=>{
     }
 });
 })
+
+// LAS COSITAS DEL BOT
+  const chatButton = document.getElementById('chatButton');
+  const chatWindow = document.getElementById('chatWindow');
+  const closeChat = document.getElementById('closeChat');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendBtn');
+
+  chatButton.addEventListener('click', () => {
+    chatWindow.classList.toggle('hidden');
+    chatWindow.classList.toggle('animate-slide-up');
+  });
+
+  closeChat.addEventListener('click', () => {
+    chatWindow.classList.add('hidden');
+  });
+
+  function addMessage(text, sender = "bot") {
+    const msg = document.createElement("div");
+    msg.classList.add("p-2", "rounded-lg", "max-w-[75%]");
+    if (sender === "bot") {
+      msg.classList.add("bg-blue-100", "self-start");
+    } else {
+      msg.classList.add("bg-gray-200", "self-end", "ml-auto");
+    }
+    msg.textContent = text;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+  async function sendMessage(){
+    const text = chatInput.value.trim();
+    console.log(text)
+    if (!text) return;
+
+    addMessage(text, true);
+    chatInput.value = "";
+
+    const res = await fetch("/bot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+    });
+
+    const data = await res.json();
+    addMessage(data.reply, "bot");
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });

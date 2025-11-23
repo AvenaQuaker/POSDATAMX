@@ -61,10 +61,10 @@
 class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
 <!--================================= NAVIGATION END ==========================================-->
-<section id="inicio" class="bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/research/case_studies/concept_a/mh_cs_concept_a.jpg)] bg-fixed bg-cover h-[60rem] flex justify-center items-center">
+<section id="inicio" class="bg-fixed bg-cover h-[60rem] flex justify-center items-center" style="background-image: url('<%= translations.inicio.fondo %>');">
 	<div class="bg-black/70 h-full w-[70%] lg:w-[30%] flex flex-col justify-center items-center text-center gap-4">
 		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-48" data-aos="zoom-in">
-		<a href="#" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-red-700"><%= translations.inicio.contactanos %></a>
+		<a href="#contacto" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-red-700"><%= translations.inicio.contactanos %></a>
 	</div>
 </section>
 <!--================================= ABOUT US START ==========================================-->
@@ -88,10 +88,6 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 			</div>
 		<% }) %>
 	</div>
-
-		<a href="#" id="aboutLeer" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">
-			<%= translations.acerca.leer_mas %>
-		</a>
 		</div>
 		<img src="images/Imagen1.jpg" alt="128x128x1" class="h-[25rem] w-full rounded bg-cover bg-center hover:scale-105 transition">
 	</div>
@@ -123,7 +119,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <!--================================= QUOTE START ==========================================-->
 <section class="py-20 bg-[#141414ff]">
 	<div class="max-w-6xl mx-auto box-content px-6 grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-12 items-center">
-		<img src="images/Imagen2.jpg" alt="128x128x1" class="h-96 w-full rounded hover:scale-105 transition" data-aos="fade-right">
+		<img src="<%= translations.contacto.fondo %>" alt="128x128x1" class="h-96 w-full rounded hover:scale-105 transition" data-aos="fade-right">
 		<div data-aos="fade-left">
 		<h2 class="text-2xl font-bold text-stone-100 mb-2"><%= translations.contacto.titulo %></h2>
 		<div class="w-24 h-2 bg-gray-300 mb-6"></div>
@@ -138,7 +134,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 			<div>
 			<h3 class="font-semibold text-stone-100"><%= translations.contacto.sugerencia %></p>
 			</div>
-			<a href="#"
+			<a href="https://wa.me/5218672476930"
 			class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3">
 			<%= translations.contacto.cotizar %>
 			</a>
@@ -189,7 +185,8 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </section>
 <!--====================================== GALLERY END ========================================================-->
 <!--======================================= TEAM START ========================================================-->
-<section id="equipo" class="py-16 bg-gray-200">
+
+<!-- <section id="equipo" class="py-16 bg-gray-200">
 	<div class="box-content max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12">
 		<div data-aos="fade-right">
 		<h2 class="text-3xl font-bold text-gray-800 mb-2"><%= translations.equipo.titulo %></h2>
@@ -214,7 +211,8 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		<% }) %>
 		</div>
 	</div>
-</section>
+</section> -->
+
 <!--======================================= TEAM END ========================================================-->
 <!--======================================= NEWS START ========================================================-->
 <section class="py-16 bg-[url('../images/WhiteBG1.jpg')] bg-fixed bg-cover">
@@ -412,6 +410,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <!--======================================= FOOTER END =======================================================-->
 </body>
 
+<!--================================================ BOT =====================================================-->
 <div id="chatButton"
   class="fixed bottom-6 right-6 bg-red-600 hover:bg-red-700 text-white rounded-full w-14 h-14 
   flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300">

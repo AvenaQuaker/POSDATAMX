@@ -200,6 +200,41 @@
         </div>
     </footer>
 
-    <script src="/js/sec.js"></script>
+<!--================================================ BOT =====================================================-->
+<div id="chatButton"
+  class="fixed bottom-6 right-6 bg-red-600 hover:bg-red-700 text-white rounded-full w-14 h-14 
+  flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M2.25 12.75c0 1.25.25 2.45.7 3.54A8.97 8.97 0 0012 21c1.9 0 3.67-.6 5.13-1.63L21.75 21 20 16.13A9 9 0 1012 3c-4.97 0-9 4.03-9 9z" />
+  </svg>
+</div>
+<div id="chatWindow"
+	class="fixed bottom-24 right-6 bg-white w-80 h-96 rounded-lg shadow-2xl border border-gray-200 flex flex-col overflow-hidden hidden">
+	
+	<div class="bg-red-600 text-white p-3 flex justify-between items-center">
+		<span class="font-semibold">Soporte POSDATAMX</span>
+		<button id="closeChat" class="hover:text-gray-200">✕</button>
+	</div>
+
+	<div id="chatMessages" class="flex-1 p-3 overflow-y-auto text-sm space-y-2 bg-gray-50">
+		<div class="bg-gray-200 text-gray-800 p-2 rounded-lg w-max max-w-[80%]">
+		¡Hola! 👋 Soy tu asistente virtual de POSDATAMX.<br>
+		¿En qué puedo ayudarte hoy?
+		</div>
+	</div>
+
+	<div class="p-3 border-t flex items-center bg-white">
+		<input id="chatInput" type="text"
+		placeholder="Escribe un mensaje..."
+		class="flex-1 border border-gray-300 rounded-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500" />
+		<button id="sendBtn"
+		class="ml-2 bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+		➤
+		</button>
+	</div>
+</div>
 </body>
+<script src="/js/sec.js"></script>
 </html>
