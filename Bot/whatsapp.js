@@ -8,8 +8,11 @@ export function botWhatsapp() {
     console.log(`${BOT_NAME} iniciando...`);
 
     const client = new Client({
-        authStrategy: new LocalAuth(),
+        authStrategy: new LocalAuth({
+            dataPath: './wwebjs_auth'
+        }),
         puppeteer: {
+            executablePath:"/usr/bin/google-chrome",
             headless: true, 
             args: [
                 "--no-sandbox",
