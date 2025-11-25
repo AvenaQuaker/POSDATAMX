@@ -11,7 +11,7 @@ router.post("/enviarCorreo", async (req, res) => {
     
     try {
         const { data, error } = await resend.emails.send({
-        from: "POSDATAMX <onboarding@resend.dev>",
+        from: "POSDATAMX <contacto@posdatamx.online>",
         to: process.env.MAIN_EMAIL,
         reply_to: email,
         subject: `Consulta de ${nombre}`,
