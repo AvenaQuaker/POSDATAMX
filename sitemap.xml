@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://posdatamx.online/</loc>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://posdatamx.online/Servicios</loc>
+    </url>
+    <url>
+        <loc>https://posdatamx.online/Servicios/fotografia</loc>
+    </url>
+    <url>
+        <loc>https://posdatamx.online/Servicios/diseno</loc>
+    </url>
+    <url>
+        <loc>https://posdatamx.online/Servicios/contenido</loc>
+    </url>
+    <url>
+        <loc>https://posdatamx.online/Servicios/web</loc>
+    </url>
+    <url>
+        <loc>https://posdatamx.online/Servicios/streaming</loc>
+    </url>
+</urlset>
