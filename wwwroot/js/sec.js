@@ -77,18 +77,18 @@ document.getElementById("btnForm").addEventListener("click",()=>{
     background: '#fff',
     preConfirm: () => {
 
-    const name = document.getElementById('name').value.trim();
-    const emp = document.getElementById('emp').value.trim();
-    const tel = document.getElementById('tel').value.trim();
+    const nombre = document.getElementById('name').value.trim();
+    const empresa = document.getElementById('emp').value.trim();
+    const telefono = document.getElementById('tel').value.trim();
     const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const mensaje = document.getElementById('message').value.trim();
 
-    if (!name || !email || !message) {
+    if (!nombre || !email || !mensaje || !telefono || !empresa) {
         Swal.showValidationMessage('Por favor, completa los campos obligatorios');
         return false;
     }
 
-    return { name, emp, tel, email, message };
+    return { nombre, email, mensaje ,telefono, empresa };
     }
 }).then(result => {
     if (result.isConfirmed) {
