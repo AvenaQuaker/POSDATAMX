@@ -49,6 +49,9 @@ app.get("/sitemap.xml",(req,res)=>{
 app.get("/robots.txt",(req,res)=>{
   res.sendFile(path.join(__dirname, "robots.txt"));
 })
+app.get("/posdatamx.png",(req,res)=>{
+  res.sendFile(path.join(__dirname, "posdatamx.png"));
+})
 
 app.use("/bot",botRouter)
 app.use("/admin", adminRouter);
