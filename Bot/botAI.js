@@ -7,7 +7,7 @@ classifier.addDocument("hola", "saludo");
 classifier.addDocument("buen día", "saludo");
 classifier.addDocument("que tal", "saludo");
 
-// SERVICIO GENERAL
+// SERVICIOS
 classifier.addDocument("servicios", "servicios");
 classifier.addDocument("qué ofrecen", "servicios");
 
@@ -33,6 +33,7 @@ classifier.addDocument("dónde están", "ubicacion");
 classifier.addDocument("cotización", "cotizacion");
 classifier.addDocument("precio", "cotizacion");
 
+// HUMANO
 classifier.addDocument("humano", "humano");
 classifier.addDocument("asesor", "humano");
 classifier.addDocument("persona", "humano");
@@ -40,8 +41,18 @@ classifier.addDocument("persona", "humano");
 classifier.train();
 
 export const respuestas = {
-    saludo: `👋 ¡Hola! Soy el asistente virtual de POSDATAMX.\n\n¿En qué puedo ayudarte hoy?`,
-    
+
+    menuInicio: `👋 ¡Hola! Soy el asistente virtual de *POSDATAMX*.
+
+📌 Elige una opción con el número:
+
+1️⃣ Ver nuestros servicios  
+2️⃣ Solicitar cotización  
+3️⃣ Ver ubicación  
+4️⃣ Información de contacto  
+5️⃣ Hablar con un asesor humano  
+`,
+
     servicios: `📌 *Nuestros servicios:*
 - 📸 Fotografía profesional
 - 🎨 Diseño gráfico
@@ -49,34 +60,55 @@ export const respuestas = {
 - 🎬 Video corporativo
 - 📡 Streaming profesional
 
-Escríbeme: *fotografía*, *diseño*, *web*, *video*, *streaming* para más info.`,
+Escribe una palabra clave o un número del menú.`,
 
-    foto: `📸 *Servicio de Fotografía*\nCaptura profesional para empresas, productos, eventos y contenido digital.\n¿Quieres conocer precios o agendar?`,
+    foto: `📸 *Fotografía profesional*\nPara productos, empresas, eventos y más.`,
 
-    diseno: `🎨 *Servicio de Diseño Gráfico*\nIdentidad visual, logos, branding, banners y todo tipo de diseño publicitario.`,
+    diseno: `🎨 *Diseño gráfico*\nBranding, logos, banners y material publicitario.`,
 
-    web: `🌐 *Desarrollo Web*\nSitios modernos, rápidos y seguros. Hosting y mantenimiento incluidos.`,
+    web: `🌐 *Desarrollo Web*\nSitios rápidos, modernos y con hosting incluido.`,
 
-    video: `🎬 *Video Corporativo*\nProducción completa para empresas, storytelling, entrevistas y contenido digital.`,
+    video: `🎬 *Video Corporativo*\nProducción completa para negocios y marcas.`,
 
-    streaming: `📡 *Streaming Profesional*\nTransmisión en vivo para eventos, conferencias y contenido en redes sociales.`,
+    streaming: `📡 *Streaming Profesional*\nEventos, conferencias y transmisiones.`,
 
-    contacto: `📞 *Datos de contacto:*\nWhatsApp: este chat\nCorreo: contacto@posdatamx.com\nFacebook: POSDATAMX`,
+    contacto: `📞 *Contacto:*
+WhatsApp: este chat
+Correo: contacto@posdatamx.com`,
 
-    ubicacion: `📍 *Ubicación:* Hotel Real Inn, Av. Reforma 5430, Nuevo Laredo, Tamaulipas.`,
+    ubicacion: `📍 Estamos en: Hotel Real Inn, Av. Reforma 5430.`,
 
-    cotizacion: `💼 Para darte una cotización necesito saber:\n\n1) ¿Qué servicio deseas?\n2) ¿Qué tan pronto lo necesitas?\n3) ¿Cuál es tu presupuesto aproximado?\n\nPuedo ayudarte o pasarte con un asesor humano.`,
+    cotizacion: `💼 Para consultar precios, utilidades y servicios mas especializados, te pondremos en contacto con un asesor que
+    le apoyo en el tema! contactando un asesor...`,
 
-    humano: `🧑‍💼 De acuerdo, te conectaré con un asesor humano.\n\n__HUMANO__`,
+    humano: `🧑‍💼 Conectándote con un asesor humano...`,
 
-    default: `😅 No entendí muy bien.\nPuedes escribir:\n• servicios\n• fotografía\n• diseño\n• web\n• cotización\n• ubicación\n• contacto\n\nO escribe *asesor* para hablar con un humano.`
+    default: `🤔 No entendí.
+Escribe un número del menú o una palabra como *fotografía*, *diseño*, *web*, *video*, *streaming*.`
 };
 
+function handleMenu(num) {
+    switch(num) {
+        case "1": return respuestas.servicios;
+        case "2": return respuestas.cotizacion;
+        case "3": return respuestas.ubicacion;
+        case "4": return respuestas.contacto;
+        case "5": return respuestas.humano;
+        default: return respuestas.default;
+    }
+}
+
 export function getIAResponse(texto) {
-    const msg = texto.toLowerCase();
+    const msg = texto.toLowerCase().trim();
 
-    const classification = classifier.getClassifications(msg);
-    const top = classification[0];
+    if (/^[1-5]$/.test(msg)) {
+        return handleMenu(msg);
+    }
 
+    if (msg.includes("humano") || msg.includes("asesor") || msg.includes("persona")) {
+        return respuestas.humano;
+    }
+
+    const top = classifier.getClassifications(msg)[0];
     return respuestas[top.label] || respuestas.default;
 }
