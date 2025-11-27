@@ -43,6 +43,10 @@ app.use('/json', express.static('./node_modules/jsoneditor/dist'));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./Views"));
 
+app.get("/sitemap.xml",(req,res)=>{
+  res.sendFile(path.join(__dirname, "sitemap.xml"));
+})
+
 app.use("/bot",botRouter)
 app.use("/admin", adminRouter);
 app.use("/", contactRouter);
