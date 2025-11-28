@@ -40,7 +40,7 @@ classifier.train();
 
 export const respuestas = {
 
-    menuInicio: `👋 ¡Hola! Bienvenido a POSDATAMX.
+    menu: `👋 ¡Hola! Bienvenido a POSDATAMX.
 Estoy aquí para ayudarte.
 
 📌 *Menú principal*  
