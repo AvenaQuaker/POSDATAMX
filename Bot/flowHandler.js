@@ -7,7 +7,7 @@ export async function handleMessage(msg, client) {
     const from = msg.from;
     const text = msg.body.toLowerCase().trim();
 
-    if (chatsHumanos.has(from)) return;
+    //if (chatsHumanos.has(from)) return;
 
     const triggersCotizacion = [
         "cotización", "cotizacion",
