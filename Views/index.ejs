@@ -103,7 +103,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		<% }) %>
 	</div>
 		</div>
-		<img src="images/Imagen1.jpg" alt="128x128x1" class="h-[25rem] w-full rounded bg-cover bg-center hover:scale-105 transition">
+		<img src='<%= translations.acerca.foto %>' alt="128x128x1" class="h-[25rem] w-full rounded bg-cover bg-center hover:scale-105 transition drop-shadow-2xl">
 	</div>
 </section>
 <!--================================= ABOUT US END ==========================================-->
@@ -165,34 +165,40 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <div class="w-24 h-2 bg-gray-300 mx-auto my-4" data-aos="fade-down"></div>
 
 <div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-12" data-aos="zoom-in">
-	<div class="relative group rounded w-full sm:col-span-2 h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen3.jpg')] bg-cover bg-center hover:scale-105 transition">
+	<div class="relative group rounded w-full sm:col-span-2 h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-cover bg-center hover:scale-105 transition"
+		style="background-image: url('<%= translations.galeria.cards[0].foto %>');">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		<%= translations.galeria.cards[0] %>
+		<%= translations.galeria.cards[0].texto %>
 		</div>
 	</div>
-	<div class="relative group sm:row-span-2 rounded w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen6.jpg')] bg-cover bg-center hover:scale-105 transition">
+	<div class="relative group sm:row-span-2 rounded w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-cover bg-center hover:scale-105 transition"
+		style="background-image: url('<%= translations.galeria.cards[1].foto %>');">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		<%= translations.galeria.cards[1] %>
+		<%= translations.galeria.cards[1].texto %>
 		</div>
 	</div>
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen7.jpg')] bg-cover bg-center hover:scale-105 transition">
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg  bg-cover bg-center hover:scale-105 transition"
+	style="background-image: url('<%= translations.galeria.cards[2].foto %>');">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		<%= translations.galeria.cards[2] %>
+		<%= translations.galeria.cards[2].texto %>
 		</div>
 	</div>
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen4.jpg')] bg-cover bg-center hover:scale-105 transition">
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg  bg-cover bg-center hover:scale-105 transition"
+	style="background-image: url('<%= translations.galeria.cards[3].foto %>');">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		<%= translations.galeria.cards[3] %>
+		<%= translations.galeria.cards[3].texto %>
 		</div>
 	</div>
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen5.jpg')] bg-cover bg-center hover:scale-105 transition">
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg  bg-cover bg-center hover:scale-105 transition"
+	style="background-image: url('<%= translations.galeria.cards[4].foto %>');">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		<%= translations.galeria.cards[4] %>
+		<%= translations.galeria.cards[4].texto %>
 		</div>
 	</div>
-	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg bg-[url('../images/Imagen8.jpg')] bg-cover bg-center hover:scale-105 transition">
+	<div class="relative group rounded w-full h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-lg  bg-cover bg-center hover:scale-105 transition"		
+	style="background-image: url('<%= translations.galeria.cards[5].foto %>');">
 		<div class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-		<%= translations.galeria.cards[5] %>
+		<%= translations.galeria.cards[5].texto %>
 		</div>
 	</div>
 </div>
@@ -237,11 +243,11 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-12">
 
-	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
-		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+	<div class="flex flex-col gap-1 h-[35rem] hover:shadow-xl transition-all" data-aos="fade-up">
+		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-[60%] bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
 			
 		</div>
-		<div class="py-4 gap-2 flex flex-col bg-white">
+		<div class="py-4 gap-2 h-[40%] flex flex-col bg-white">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[0].titulo %></h3>
 			<p class="text-gray-600 text-sm">
 				<%= translations.noticias.cards[0].descripcion %>
@@ -251,28 +257,28 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 		</div>
 	</div>
 
-	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
-		<div class="py-4 gap-2 flex flex-col bg-white">
+	<div class="flex flex-col gap-1 hover:shadow-xl transition-all " data-aos="fade-up">
+		<div class="py-4 gap-2 flex flex-col bg-white h-[40%]">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[1].titulo %></h3>
-			<p class="text-gray-600 text-sm">
+			<p class="text-gray-600 text-sm h-[60%]">
 				<%= translations.noticias.cards[1].descripcion %>
 			</p>
-					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
-					wide mt-2"><%= translations.noticias.cards[1].leer_mas %></a>
+				<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
+				wide mt-2"><%= translations.noticias.cards[1].leer_mas %></a>
 		</div>
-		<div style="background-image: url('<%= translations.noticias.cards[1].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+		<div style="background-image: url('<%= translations.noticias.cards[1].img %>');" class="relative group rounded w-full h-[60%] bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
 
 		</div>
 		
 	</div>
 
-	<div class="flex flex-col gap-1 hover:shadow-xl transition" data-aos="fade-up">
-		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full h-80 bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+	<div class="flex flex-col gap-1 hover:shadow-xl transition-all" data-aos="fade-up">
+		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full bg-center bg-cover flex items-center justify-center text-gray-500 text-lg h-[60%]">
 
 		</div>
-		<div class="py-4 gap-2 flex flex-col bg-white">
+		<div class="py-4 gap-2 flex flex-col bg-white h-[40%]">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[2].titulo %></h3>
-			<p class="text-gray-600 text-sm">
+			<p class="text-gray-600 text-sm ">
 				<%= translations.noticias.cards[2].descripcion %>
 			</p>
 					<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
@@ -349,7 +355,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 				<%= translations.contactanos.form.enviar %>
 			</button>
 			</form>
-			<div style="background-image: url('../images/Contact.jpg');"class="bg-cover bg-center w-full  bg-gray-600 rounded"></div>
+			<div style="background-image: url('https://medicalstoremx.com/cdn/shop/files/Sin-titulo-1.jpg');"class="bg-cover bg-center w-full  bg-gray-600 rounded drop-shadow-2xl"></div>
         </div>
 	</div>
 </section>
