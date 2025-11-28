@@ -12,17 +12,18 @@ export function botWhatsapp() {
             dataPath: './wwebjs_auth'
         }),
         puppeteer: {
-            executablePath:"/usr/bin/google-chrome",
-            headless: true, 
+            executablePath: "/usr/bin/chromium-browser", 
+            headless: true,
             args: [
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
-                "--disable-dev-shm-usage"
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+                "--disable-software-rasterizer"
             ],
             defaultViewport: null
         }
     });
-
 
     client.on("qr", qr => {
         console.log("Escanea este QR para iniciar sesión en WhatsApp:");
@@ -42,5 +43,4 @@ export function botWhatsapp() {
     });
 
     client.initialize();
-
 }
