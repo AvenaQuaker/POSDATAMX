@@ -25,13 +25,13 @@ export function botWhatsapp() {
     });
 
     client.on("qr", async qr => {
-        console.log("Generando QR...");
+    console.log("Generando QR...");
 
-        const qrImageUrl = await qrcode.generate(qr, { small: true })
+    const qrImageUrl = await qrcode.toDataURL(qr);
 
-        console.log("🔗 Escanea este QR desde tu navegador:");
-        console.log(qrImageUrl);
-    });
+    console.log("🔗 Escanea este QR desde tu navegador:");
+    console.log(qrImageUrl);
+});
 
     client.on("ready", () => {
         console.log(`✅ ${BOT_NAME} está listo y conectado.`);
