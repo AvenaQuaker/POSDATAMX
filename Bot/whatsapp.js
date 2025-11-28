@@ -24,9 +24,13 @@ export function botWhatsapp() {
         }
     });
 
-    client.on("qr", qr => {
-        console.log("Escanea este QR para iniciar sesión en WhatsApp:");
-        qrcode.generate(qr, { small: true });
+    client.on("qr", async qr => {
+        console.log("Generando QR...");
+
+        const qrImageUrl = await qrcode.toDataURL(qr);
+
+        console.log("🔗 Escanea este QR desde tu navegador:");
+        console.log(qrImageUrl);
     });
 
     client.on("ready", () => {
