@@ -1,4 +1,4 @@
-import qrcode from "qrcode-terminal";
+import qrcode from "qrcode";
 import pkg from "whatsapp-web.js";
 const { Client, LocalAuth } = pkg;
 import { BOT_NAME } from "./config.js";
@@ -27,7 +27,7 @@ export function botWhatsapp() {
     client.on("qr", async qr => {
         console.log("Generando QR...");
 
-        const qrImageUrl = await qrcode.toDataURL(qr);
+        const qrImageUrl = await qrcode.generate(qr, { small: true })
 
         console.log("🔗 Escanea este QR desde tu navegador:");
         console.log(qrImageUrl);
