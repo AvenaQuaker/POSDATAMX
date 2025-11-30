@@ -24,7 +24,7 @@ Puedes visitarnos o agendar una cita por WhatsApp antes de acudir.
 contacto: `
 📞 ¡Claro! Puedes contactarnos de las siguientes formas:  
 - **Correo:** contacto@posdatamx.com  
-- **Teléfono:** +52 867 123 4567  
+- **Teléfono:** +52 867 129 1218
 - **Redes Sociales:** estamos como **@posdatamx** en Instagram, Facebook y LinkedIn.
 
 📱 Puedes enviarnos un mensaje directo en WhatsApp:  
