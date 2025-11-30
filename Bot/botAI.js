@@ -157,11 +157,23 @@ function handleMenu(num) {
     }
 }
 
-export function getIAResponse(texto) {
+const userState = new Map(); 
+
+const afirmativos = ["si","sí","claro","ok","vale","perfecto"];
+
+export function getIAResponse(texto, from) {  
     const msg = texto.toLowerCase().trim();
 
     if (/^[1-7]$/.test(msg)) {
+        userState.set(from, "esperando_confirmacion");
         return handleMenu(msg);
+    }
+
+    if (userState.get(from) === "esperando_confirmacion") {
+        if (afirmativos.includes(msg)) {
+            userState.delete(from);
+            return respuestas.humano;
+        }
     }
 
     if (msg.includes("humano") || msg.includes("asesor") || msg.includes("persona")) {
@@ -169,5 +181,10 @@ export function getIAResponse(texto) {
     }
 
     const top = classifier.getClassifications(msg)[0];
+
+    if (["foto","diseno","contenido","web","video","streaming"].includes(top.label)) {
+        userState.set(from, "esperando_confirmacion");
+    }
+
     return respuestas[top.label] || respuestas.default;
 }

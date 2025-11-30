@@ -39,7 +39,6 @@ export async function handleMessage(msg, client) {
         return;
     }
 
-    // 3. Procesamiento normal de IA
-    const reply = getIAResponse(text);
+    const reply = getIAResponse(text,from);
     await client.sendMessage(from, reply);
 }
