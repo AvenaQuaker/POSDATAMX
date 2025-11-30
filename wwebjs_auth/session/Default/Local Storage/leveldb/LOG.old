@@ -1,2 +1,3 @@
-2025/11/28-12:47:43.225 11d0 Creating DB C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Local Storage\leveldb since it was missing.
-2025/11/28-12:47:43.243 11d0 Reusing MANIFEST C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/30-13:37:40.105 42bc Reusing MANIFEST C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/30-13:37:40.124 42bc Recovering log #3
+2025/11/30-13:37:40.125 42bc Reusing old log C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Local Storage\leveldb/000003.log 

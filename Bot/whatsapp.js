@@ -3,9 +3,12 @@ import pkg from "whatsapp-web.js";
 const { Client, LocalAuth } = pkg;
 import { BOT_NAME } from "./config.js";
 import { handleMessage } from "./flowHandler.js";
+import fs from "fs";
 
 export function botWhatsapp() {
     console.log(`${BOT_NAME} iniciando...`);
+
+    const sessionExist = fs.existsSync("./wwebjs_auth");
 
     const client = new Client({
         authStrategy: new LocalAuth({
@@ -25,10 +28,15 @@ export function botWhatsapp() {
     });
 
     client.on("qr", async qr => {
-    console.log("Generando QR...");
+
+    if(sessionExist){
+        console.log("Sesion existente encontrada!")
+        return;
+    }
 
     const qrImageUrl = await qrcode.toDataURL(qr);
 
+    console.log("Generando QR...");
     console.log("🔗 Escanea este QR desde tu navegador:");
     console.log(qrImageUrl);
 });

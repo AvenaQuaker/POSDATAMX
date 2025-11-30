@@ -1,2 +1,3 @@
-2025/11/28-12:47:46.311 11d0 Creating DB C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Session Storage since it was missing.
-2025/11/28-12:47:46.321 11d0 Reusing MANIFEST C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Session Storage/MANIFEST-000001
+2025/11/30-13:37:43.716 3520 Reusing MANIFEST C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Session Storage/MANIFEST-000001
+2025/11/30-13:37:43.734 3520 Recovering log #3
+2025/11/30-13:37:43.735 3520 Reusing old log C:\Archivos\Aplicaciones\WAMPSERVER\www\POSDATAMX\wwebjs_auth\session\Default\Session Storage/000003.log 
