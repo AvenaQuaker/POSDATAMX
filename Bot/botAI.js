@@ -50,9 +50,9 @@ Estoy aquí para ayudarte.
 4️⃣ Servicios Web  
 5️⃣ Video  
 6️⃣ Streaming  
-7️⃣ Hablar con un asesor/Cotizar
+7️⃣ Hablar con un asesor/Cotizar/Soporte
 
-Escribe el *número* de la opción que deseas consultar.
+Escribe el *número* de la opción que deseas consultar, tambien puedes preguntar por la ubicacion o por el contacto si asi lo deseas.
 `,
     foto: `📸 *Fotografía Profesional*
 

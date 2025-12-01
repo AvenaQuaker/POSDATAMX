@@ -28,21 +28,18 @@
 	<nav id="mainNav" 
 		class="bg-[#2b2b2b] fixed top-0 left-0 w-full py-3 px-4 shadow-md transition-all duration-500 -translate-y-full opacity-0 z-30">
 		<div class="flex justify-between items-center mx-6 lg:mx-40">
-		<!-- Logo -->
+
 		<img src="images/LogoBlanco.png" alt="150x50" class="h-10">
 
-		<!-- Opciones en pantallas grandes -->
 		<div class="hidden md:flex space-x-6">
 		<a id="navInicio" href="#inicio" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.inicio %></a>
 		<a id="navAcerca" href="#acerca" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.acerca %></a>
 		<a id="navServicios" href="#servicios" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.servicios %></a>
-		<a id="navEquipo" href="#equipo" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.equipo %></a>
+		<!-- <a id="navEquipo" href="#equipo" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.equipo %></a> -->
 		<a id="navContacto" href="#contacto" class="text-gray-200 hover:text-red-800 transition-colors font-semibold text-[1rem]"><%= translations.nav.contacto %></a>
 		</div>
 
-		<!-- Botón hamburguesa (visible en móviles) -->
 		<button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
-			<!-- ícono hamburguesa -->
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 			</svg>
@@ -50,12 +47,11 @@
 		</div>
 	</nav>
 
-	<!-- Menú lateral (off-canvas) -->
 	<div id="sideMenu" 
 		class="fixed top-0 right-0 w-64 h-full bg-stone-50 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
 		<div class="flex justify-between items-center p-4 border-b">
 		<span class="font-bold text-gray-800">Menú</span>
-		<!-- Botón cerrar -->
+
 		<button id="closeMenu" class="text-gray-700">
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -66,7 +62,7 @@
 		<a id="menuInicio" href="#inicio" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.inicio %></a>
 		<a id="menuAcerca" href="#acerca" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.acerca %></a>
 		<a id="menuServicios" href="#servicios" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.servicios %></a>
-		<a id="menuEquipo" href="#equipo" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.equipo %></a>
+		<!-- <a id="menuEquipo" href="#equipo" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.equipo %></a> -->
 		<a id="menuContacto" href="#contacto" class="text-gray-700 hover:underline font-semibold"><%= translations.nav.contacto %></a>
 		</div>
 	</div>

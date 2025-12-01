@@ -9,7 +9,7 @@ import moongose from "mongoose";
 import dotenv from "dotenv";
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
-import { botWhatsapp } from "./Bot/whatsapp.js";
+import { Whatsapp } from "./Bot/whatsapp.js";
 
 dotenv.config();
 
@@ -52,6 +52,9 @@ app.get("/robots.txt",(req,res)=>{
 app.get("/posdatamx.png",(req,res)=>{
   res.sendFile(path.join(__dirname, "posdatamx.png"));
 })
+app.get("/qr.png",(req,res)=>{
+  res.sendFile(path.join(__dirname, "qr.png"));
+})
 
 app.use("/bot",botRouter)
 app.use("/admin", adminRouter);
@@ -63,7 +66,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
   try {
-    botWhatsapp();
+    Whatsapp();
   } catch (err) {
       console.error("❌ Error al iniciar el bot:", err);
   }

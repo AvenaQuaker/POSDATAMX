@@ -1,57 +1,82 @@
-import qrcode from "qrcode";
+
+import mongoose from "mongoose";
 import pkg from "whatsapp-web.js";
-const { Client, LocalAuth } = pkg;
-import { BOT_NAME } from "./config.js";
-import { handleMessage } from "./flowHandler.js";
-import fs from "fs";
+const { Client, RemoteAuth } = pkg;
+import dotenv from "dotenv";
+dotenv.config();
+import QRCode from "qrcode";
+import { MongoStore } from "wwebjs-mongo";
+import { getIAResponse } from "./botAI.js";
 
-export function botWhatsapp() {
-    console.log(`${BOT_NAME} iniciando...`);
+let client = null;
 
-    const sessionExist = fs.existsSync("./wwebjs_auth");
+export async function Whatsapp() {
+    try {
+        await mongoose.connect(process.env.MONGODB_URI, {
+            dbName: "whatsapp_sessions",
+        });
+        console.log("📦 MongoDB conectado para sesiones ✔");
+    } catch (err) {
+        console.error("❌ Error al conectar Mongo:", err);
+        return;
+    }
 
-    const client = new Client({
-        authStrategy: new LocalAuth({
-            dataPath: './wwebjs_auth'
-        }),
+    const store = new MongoStore({ mongoose });
+
+
+    const authStrategy = new RemoteAuth({
+        store,
+        clientId: "posdatamx",
+        backupSyncIntervalMs: 60000
+    });
+
+    client = new Client({
+        authStrategy,
         puppeteer: {
             headless: true,
             args: [
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu",
-                "--disable-software-rasterizer",
-                "--disable-extensions"
+                "--disable-dev-shm-usage"
             ]
         }
     });
 
-    client.on("qr", async qr => {
+    client.on("qr", async (qr) => {
+        console.log("📲 Generando QR PNG...");
 
-    if(sessionExist){
-        console.log("Sesion existente encontrada!")
-        return;
-    }
-
-    const qrImageUrl = await qrcode.toDataURL(qr);
-
-    console.log("Generando QR...");
-    console.log("🔗 Escanea este QR desde tu navegador:");
-    console.log(qrImageUrl);
-});
-
-    client.on("ready", () => {
-        console.log(`✅ ${BOT_NAME} está listo y conectado.`);
+        try {
+            await QRCode.toFile("./qr.png", qr, { width: 350 });
+            console.log(`🖼  QR generado → /qr.png`);
+        } catch (err) {
+            console.log("❌ Error generando QR:", err);
+        }
     });
 
-    client.on("message", async msg => {
+    client.on("remote_session_saved", () =>
+        console.log("💾 Sesión guardada en Mongo ✔")
+    );
+
+    client.on("authenticated", () =>
+        console.log("🔐 Sesión autenticada ✔")
+    );
+
+    client.on("ready", () =>
+        console.log("🤖 WhatsApp listo ✔")
+    );
+
+    client.on("message", async (msg) => {
         try {
-            await handleMessage(msg, client);
+            const texto = msg.body?.trim();
+
+            if (!texto) return;
+            const reply = getIAResponse(texto);
+            await client.sendMessage(msg.from, reply);
         } catch (err) {
             console.error("❌ Error procesando mensaje:", err);
         }
     });
 
     client.initialize();
+    return client;
 }
