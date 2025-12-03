@@ -1,13 +1,8 @@
-import { getIAResponse } from "./botAI.js";
-import { OWNER_NUMBER } from "./config.js";
-
-export const chatsHumanos = new Set();
-
 export async function handleMessage(msg, client) {
     const from = msg.from;
     const text = msg.body.toLowerCase().trim();
 
-    //if (chatsHumanos.has(from)) return;
+    if (!from.endsWith("@c.us")) return;
 
     const triggersCotizacion = [
         "cotización", "cotizacion",
@@ -31,8 +26,9 @@ export async function handleMessage(msg, client) {
             "🧑‍💼 Te conectaré con un asesor humano.\nPor favor espera un momento…"
         );
 
+        console.log("📩 Enviando al dueño:", OWNER_NUMBER);
+
         await client.sendMessage(
-            console.log("🧑‍💼 Nuevo cliente requiere asesor humano"),
             OWNER_NUMBER,
             `🔵 *Nuevo cliente requiere asesoramiento humano*\n\n📱 Número: ${from}\n📌 Mensaje: "${msg.body}"`
         );
@@ -40,6 +36,6 @@ export async function handleMessage(msg, client) {
         return;
     }
 
-    const reply = getIAResponse(text,from);
+    const reply = getIAResponse(text, from);
     await client.sendMessage(from, reply);
 }
