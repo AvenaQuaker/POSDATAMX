@@ -366,9 +366,6 @@
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
@@ -435,9 +432,6 @@
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -471,6 +465,9 @@
   .h-28 {
     height: calc(var(--spacing) * 28);
   }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -480,8 +477,8 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
-  .h-80 {
-    height: calc(var(--spacing) * 80);
+  .h-82 {
+    height: calc(var(--spacing) * 82);
   }
   .h-96 {
     height: calc(var(--spacing) * 96);
@@ -510,17 +507,14 @@
   .h-\[70dvh\] {
     height: 70dvh;
   }
+  .h-\[100\%\] {
+    height: 100%;
+  }
   .h-full {
     height: 100%;
   }
   .h-max {
     height: max-content;
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
   }
   .w-4\/5 {
     width: calc(4/5 * 100%);
@@ -876,17 +870,11 @@
       background-color: color-mix(in oklab, var(--color-gray-400) 70%, transparent);
     }
   }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
-  }
   .bg-gray-600 {
     background-color: var(--color-gray-600);
   }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
-  }
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
   }
   .bg-red-600 {
     background-color: var(--color-red-600);
@@ -922,17 +910,11 @@
   .bg-\[url\(\'\.\.\/images\/WhiteBG1\.jpg\'\)\] {
     background-image: url('../images/WhiteBG1.jpg');
   }
-  .bg-\[url\(\'\.\.\/images\/WhiteBG2\.jpg\'\)\] {
-    background-image: url('../images/WhiteBG2.jpg');
-  }
   .bg-\[url\(\'\/icons\/User\.svg\'\)\] {
     background-image: url('/icons/User.svg');
   }
   .bg-\[url\(\'\/images\/adminFondo\.jpg\'\)\] {
     background-image: url('/images/adminFondo.jpg');
-  }
-  .bg-\[url\(https\:\/\/www\.hermanmiller\.com\/content\/dam\/hmicom\/page_assets\/research\/case_studies\/concept_a\/mh_cs_concept_a\.jpg\)\] {
-    background-image: url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/research/case_studies/concept_a/mh_cs_concept_a.jpg);
   }
   .from-black\/30 {
     --tw-gradient-from: color-mix(in srgb, #000 30%, transparent);
@@ -998,9 +980,6 @@
   .p-\[2dvw\] {
     padding: 2dvw;
   }
-  .px-1 {
-    padding-inline: calc(var(--spacing) * 1);
-  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -1065,10 +1044,6 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -1491,13 +1466,6 @@
       }
     }
   }
-  .hover\:bg-blue-700 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-700);
-      }
-    }
-  }
   .hover\:bg-gray-300\/90 {
     &:hover {
       @media (hover: hover) {
@@ -1647,11 +1615,6 @@
       grid-template-columns: 0.8fr 1.2fr 0.5fr 1.5fr;
     }
   }
-  .md\:grid-cols-\[1fr_1\.2fr_0\.5fr_1\.5fr\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 1fr 1.2fr 0.5fr 1.5fr;
-    }
-  }
   .md\:grid-cols-\[1fr_2fr\] {
     @media (width >= 48rem) {
       grid-template-columns: 1fr 2fr;
@@ -1686,6 +1649,16 @@
   .lg\:h-4\/5 {
     @media (width >= 64rem) {
       height: calc(4/5 * 100%);
+    }
+  }
+  .lg\:h-\[40\%\] {
+    @media (width >= 64rem) {
+      height: 40%;
+    }
+  }
+  .lg\:h-\[60\%\] {
+    @media (width >= 64rem) {
+      height: 60%;
     }
   }
   .lg\:w-3\/5 {

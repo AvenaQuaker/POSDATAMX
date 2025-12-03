@@ -1,4 +1,4 @@
-const WHATSAPP_LINK = "https://wa.me/5218671291218";
+const WHATSAPP_LINK = "https://wa.me/5218671006263";
 
 export const respuestas = {
     es: {
@@ -25,7 +25,7 @@ Puedes visitarnos o agendar una cita por WhatsApp.
         contacto: `
 📞 ¡Claro! Puedes contactarnos:  
 - **Correo:** contacto@posdatamx.com  
-- **Teléfono:** +52 867 123 4567  
+- **Teléfono:** +52 867 100 6263  
 - **Redes Sociales:** @posdatamx (Instagram, Facebook, LinkedIn)
 
 📱 WhatsApp directo:  
@@ -156,7 +156,7 @@ Feel free to visit us or schedule an appointment on WhatsApp.
         contacto: `
 📞 You can contact us through:  
 - **Email:** contacto@posdatamx.com  
-- **Phone:** +52 867 123 4567  
+- **Phone:** +52 867 100 6263  
 - **Social Media:** @posdatamx (Instagram, Facebook, LinkedIn)
 
 📱 Direct WhatsApp chat:  

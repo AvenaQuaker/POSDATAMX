@@ -5,36 +5,103 @@ const classifier = new natural.BayesClassifier();
 // MENU
 classifier.addDocument("hola", "menu");
 classifier.addDocument("buen día", "menu");
+classifier.addDocument("buenos dias", "menu");
+classifier.addDocument("buenas tardes", "menu");
+classifier.addDocument("buenas noches", "menu");
 classifier.addDocument("que tal", "menu");
+classifier.addDocument("cómo estás", "menu");
+classifier.addDocument("hey", "menu");
+classifier.addDocument("hola qué servicios tienen", "menu");
+classifier.addDocument("quiero información", "menu");
+classifier.addDocument("información", "menu");
 classifier.addDocument("servicios", "menu");
 classifier.addDocument("qué ofrecen", "menu");
+classifier.addDocument("qué hacen", "menu");
+classifier.addDocument("qué manejan", "menu");
+classifier.addDocument("quiero saber qué hacen", "menu");
 
 // ESPECÍFICOS
 classifier.addDocument("fotografía", "foto");
 classifier.addDocument("foto", "foto");
+classifier.addDocument("sesión de fotos", "foto");
+classifier.addDocument("fotos profesionales", "foto");
+classifier.addDocument("fotógrafo", "foto");
+classifier.addDocument("quiero fotos", "foto");
+classifier.addDocument("necesito una sesión", "foto");
+
+classifier.addDocument("contenido","contenido");
+classifier.addDocument("motion", "contenido");
+classifier.addDocument("contenido para redes", "contenido");
+classifier.addDocument("edicion", "contenido");
+classifier.addDocument("produccion", "contenido");
+
 classifier.addDocument("diseño", "diseno");
+classifier.addDocument("logo", "diseno");
+classifier.addDocument("diseño gráfico", "diseno");
+classifier.addDocument("branding", "diseno");
+classifier.addDocument("identidad visual", "diseno");
+classifier.addDocument("necesito un diseño", "diseno");
+
 classifier.addDocument("página web", "web");
-classifier.addDocument("web", "web");
+classifier.addDocument("sitio web", "web");
+classifier.addDocument("quiero una web", "web");
+classifier.addDocument("necesito un sitio", "web");
+classifier.addDocument("desarrollo web", "web");
+classifier.addDocument("hosting", "web");
+classifier.addDocument("dominio", "web");
+
 classifier.addDocument("video", "video");
+classifier.addDocument("grabación", "video");
+classifier.addDocument("video corporativo", "video");
+classifier.addDocument("producción de video", "video");
+classifier.addDocument("edición de video", "video");
+classifier.addDocument("filmación", "video");
+
 classifier.addDocument("streaming", "streaming");
+classifier.addDocument("transmisión", "streaming");
+classifier.addDocument("en vivo", "streaming");
+classifier.addDocument("transmisión en vivo", "streaming");
+classifier.addDocument("live", "streaming");
+classifier.addDocument("evento en vivo", "streaming");
+
 
 // CONTACTO
 classifier.addDocument("contacto", "contacto");
 classifier.addDocument("teléfono", "contacto");
+classifier.addDocument("numero", "contacto");
 classifier.addDocument("correo", "contacto");
+classifier.addDocument("email", "contacto");
+classifier.addDocument("tienen whatsapp", "contacto");
+classifier.addDocument("cómo los contacto", "contacto");
+classifier.addDocument("puedo llamar", "contacto");
+
 
 // UBICACIÓN
 classifier.addDocument("ubicación", "ubicacion");
 classifier.addDocument("dónde están", "ubicacion");
+classifier.addDocument("cómo llegar", "ubicacion");
+classifier.addDocument("dirección", "ubicacion");
+
 
 // COTIZACIÓN
 classifier.addDocument("cotización", "cotizacion");
+classifier.addDocument("cotizar", "cotizacion");
 classifier.addDocument("precio", "cotizacion");
+classifier.addDocument("cuánto cuesta", "cotizacion");
+classifier.addDocument("cuánto cobran", "cotizacion");
+classifier.addDocument("necesito presupuesto", "cotizacion");
 
 // HUMANO
 classifier.addDocument("humano", "humano");
 classifier.addDocument("asesor", "humano");
 classifier.addDocument("persona", "humano");
+classifier.addDocument("quiero hablar con alguien", "humano");
+classifier.addDocument("atención humana", "humano");
+classifier.addDocument("necesito un asesor", "humano");
+classifier.addDocument("me puede atender una persona", "humano");
+classifier.addDocument("quiero hablar con un humano", "humano");
+classifier.addDocument("quiero una persona real", "humano");
+
 
 classifier.train();
 

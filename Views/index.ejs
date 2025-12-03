@@ -72,7 +72,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
 <!--================================= NAVIGATION END ==========================================-->
 <section id="inicio" class="bg-fixed bg-cover h-[60rem] flex justify-center items-center" style="background-image: url('<%= translations.inicio.fondo %>');">
-	<div class="bg-black/70 h-full w-[70%] lg:w-[30%] flex flex-col justify-center items-center text-center gap-4">
+	<div class="bg-black/70 h-full w-full lg:w-[30%] flex flex-col justify-center items-center text-center gap-4">
 		<h1 class="hidden">POSDATAMX | Produccion de Contenido para Empresas</h1>
 		<img src="images/LogoBlanco.png" alt="128x128x1" class="h-48" data-aos="zoom-in">
 		<a href="#contacto" class="bg-red-800 text-white px-6 py-3 rounded-full font-sams font-semibold text-lg mx-40 mt-6 inline-block hover:bg-red-700"><%= translations.inicio.contactanos %></a>
@@ -242,10 +242,10 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-12">
 
 	<div class="flex flex-col gap-1 h-[35rem] hover:shadow-xl transition-all" data-aos="fade-up">
-		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-[60%] bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+		<div style="background-image: url('<%= translations.noticias.cards[0].img %>');" class="relative group rounded w-full h-82 lg:h-[60%] bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
 			
 		</div>
-		<div class="py-4 gap-2 h-[40%] flex flex-col bg-white">
+		<div class="py-4 gap-2 lg:h-[40%] flex flex-col bg-white">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[0].titulo %></h3>
 			<p class="text-gray-600 text-sm">
 				<%= translations.noticias.cards[0].descripcion %>
@@ -256,7 +256,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 	</div>
 
 	<div class="flex flex-col gap-1 hover:shadow-xl transition-all " data-aos="fade-up">
-		<div class="py-4 gap-2 flex flex-col bg-white h-[40%]">
+		<div class="py-4 gap-2 flex flex-col bg-white lg:h-[40%]">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[1].titulo %></h3>
 			<p class="text-gray-600 text-sm h-[60%]">
 				<%= translations.noticias.cards[1].descripcion %>
@@ -264,17 +264,17 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 				<a href="#" class="text-red-600 font-semibold hover:underline text-sm tracking
 				wide mt-2"><%= translations.noticias.cards[1].leer_mas %></a>
 		</div>
-		<div style="background-image: url('<%= translations.noticias.cards[1].img %>');" class="relative group rounded w-full h-[60%] bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
+		<div style="background-image: url('<%= translations.noticias.cards[1].img %>');" class="relative group rounded w-full h-82 lg:h-[60%] bg-center bg-cover flex items-center justify-center text-gray-500 text-lg">
 
 		</div>
 		
 	</div>
 
 	<div class="flex flex-col gap-1 hover:shadow-xl transition-all" data-aos="fade-up">
-		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full bg-center bg-cover flex items-center justify-center text-gray-500 text-lg h-[60%]">
+		<div style="background-image: url('<%= translations.noticias.cards[2].img %>');" class="relative group rounded w-full bg-center bg-cover flex items-center justify-center text-gray-500 text-lg h-82 lg:h-[60%]">
 
 		</div>
-		<div class="py-4 gap-2 flex flex-col bg-white h-[40%]">
+		<div class="py-4 gap-2 flex flex-col bg-white lg:h-[40%]">
 			<h3 class="text-xl font-bold text-gray-800 mt-2"><%= translations.noticias.cards[2].titulo %></h3>
 			<p class="text-gray-600 text-sm ">
 				<%= translations.noticias.cards[2].descripcion %>
@@ -432,11 +432,7 @@ class="fixed inset-0 bg-black/50 hidden z-40"></div>
 <div id="chatButton"
   class="fixed bottom-6 right-6 bg-red-600 hover:bg-red-700 text-white rounded-full w-14 h-14 
   flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-    <path stroke-linecap="round" stroke-linejoin="round"
-      d="M2.25 12.75c0 1.25.25 2.45.7 3.54A8.97 8.97 0 0012 21c1.9 0 3.67-.6 5.13-1.63L21.75 21 20 16.13A9 9 0 1012 3c-4.97 0-9 4.03-9 9z" />
-  </svg>
+  <img src="/icons/Chat.svg" alt="chat" class="w-7 h-7 invert">
 </div>
 <div id="chatWindow"
 	class="fixed bottom-24 right-6 bg-white w-80 h-96 rounded-lg shadow-2xl border border-gray-200 flex flex-col overflow-hidden hidden">

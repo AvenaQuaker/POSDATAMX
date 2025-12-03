@@ -32,6 +32,7 @@ export async function handleMessage(msg, client) {
         );
 
         await client.sendMessage(
+            console.log("🧑‍💼 Nuevo cliente requiere asesor humano"),
             OWNER_NUMBER,
             `🔵 *Nuevo cliente requiere asesoramiento humano*\n\n📱 Número: ${from}\n📌 Mensaje: "${msg.body}"`
         );
