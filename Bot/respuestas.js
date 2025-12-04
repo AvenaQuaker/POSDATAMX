@@ -3,7 +3,7 @@ const WHATSAPP_LINK = "https://wa.me/5218671006263";
 export const respuestas = {
     es: {
         saludo: `
-👋 ¡Hola! Soy el asistente virtual de **POSDATAMX**.  
+👋 ¡Hola {nombre}! Soy el asistente virtual de **POSDATAMX**.  
 Estoy aquí para ayudarte con cualquier duda sobre nuestros servicios, cotizaciones o contacto.  
 Puedes preguntarme cosas como:
 - “¿Qué servicios ofrecen?”
@@ -12,7 +12,7 @@ Puedes preguntarme cosas como:
 `,
 
         ubicacion: `
-📍 Nuestra oficina está ubicada en el **Hotel Real Inn**,  
+📍 {nombre}, Nuestra oficina está ubicada en el **Hotel Real Inn**,  
 en **Av. Reforma 5430, Nuevo Laredo, Tamaulipas, México**.
 
 🕓 Horarios:  
@@ -23,7 +23,7 @@ Puedes visitarnos o agendar una cita por WhatsApp.
 `,
 
         contacto: `
-📞 ¡Claro! Puedes contactarnos:  
+📞 ¡Claro {nombre}! Puedes contactarnos:  
 - **Correo:** contacto@posdatamx.com  
 - **Teléfono:** +52 867 100 6263  
 - **Redes Sociales:** @posdatamx (Instagram, Facebook, LinkedIn)
@@ -33,27 +33,27 @@ Puedes visitarnos o agendar una cita por WhatsApp.
 `,
 
         cotizacion: `
-💼 Con gusto te apoyamos con una cotización.  
+💼 Con gusto te apoyamos con una cotización {nombre}.  
 Puedes hablar con un asesor aquí:  
 👉 ${WHATSAPP_LINK}
 `,
 
         precio: `
 💰 Los precios dependen del proyecto.  
-Para darte un costo exacto, contáctanos aquí:  
+Para darte un costo exacto, contáctanos aquí {nombre}:  
 👉 ${WHATSAPP_LINK}
 `,
 
         soporte: `
-🧰 ¡Puedo ayudarte!  
+🧰 ¡Puedo ayudarte {nombre}!  
 Por favor dime brevemente qué ocurre para dirigirte con el área correcta.
 `,
 
         whatsapp: `
-📱 Puedes comunicarte directamente mediante WhatsApp Business:  
+📱 Puedes comunicarte directamente mediante WhatsApp:  
 👉 ${WHATSAPP_LINK}
 
-Ahí te atenderá un asesor en tiempo real.
+Ahí te atenderá un asesor en tiempo real {nombre}.
 `,
 
         servicios: `
@@ -66,7 +66,7 @@ Ahí te atenderá un asesor en tiempo real.
 📡 Streaming profesional  
 🧩 Producción de contenido multimedia
 
-¿Sobre cuál servicio quieres saber más?
+¿Sobre cuál servicio quieres saber más {nombre}?
 `,
 
         servicio_fotografia: `
@@ -116,7 +116,7 @@ Ahí te atenderá un asesor en tiempo real.
 `,
 
         default: `
-🤔 No entendí bien tu mensaje.  
+🤔 No entendí bien tu mensaje {nombre}.  
 Puedes preguntarme por:
 • Fotografía  
 • Diseño  
@@ -133,7 +133,7 @@ O si prefieres, puedo pasarte con un asesor.
     // ====== INGLÉS ======
     en: {
         saludo: `
-👋 Hello! I’m the virtual assistant from **POSDATAMX**.  
+👋 Hello {nombre}!  I’m the virtual assistant from **POSDATAMX**.  
 I can help you with services, quotes or general information.
 
 You can ask things like:
@@ -143,7 +143,7 @@ You can ask things like:
 `,
 
         ubicacion: `
-📍 Our main office is located at **Hotel Real Inn**,  
+📍 {nombre}, Our main office is located at **Hotel Real Inn**,  
 **Av. Reforma 5430, Nuevo Laredo, Tamaulipas, Mexico**.
 
 🕓 Business hours:  
@@ -154,7 +154,7 @@ Feel free to visit us or schedule an appointment on WhatsApp.
 `,
 
         contacto: `
-📞 You can contact us through:  
+📞 {nombre}, You can contact us through:  
 - **Email:** contacto@posdatamx.com  
 - **Phone:** +52 867 100 6263  
 - **Social Media:** @posdatamx (Instagram, Facebook, LinkedIn)
@@ -164,27 +164,27 @@ Feel free to visit us or schedule an appointment on WhatsApp.
 `,
 
         cotizacion: `
-💼 Sure! We can help you with a full quote.  
+💼 Sure {nombre}! We can help you with a full quote.  
 You can speak directly with an advisor here:  
 👉 ${WHATSAPP_LINK}
 `,
 
         precio: `
 💰 Prices depend on the project.  
-For exact numbers, talk with an advisor:  
+For exact numbers, talk with an advisor {nombre}:  
 👉 ${WHATSAPP_LINK}
 `,
 
         soporte: `
-🧰 I can assist you!  
+🧰 I can assist you {nombre}!  
 Tell me briefly what issue you're having.
 `,
 
         whatsapp: `
-📱 You can contact us directly using WhatsApp Business:  
+📱 You can contact us directly using WhatsApp:  
 👉 ${WHATSAPP_LINK}
 
-An advisor will assist you instantly.
+An advisor will assist you instantly {nombre}.
 `,
 
         servicios: `
@@ -197,7 +197,7 @@ An advisor will assist you instantly.
 📡 Professional Streaming  
 🧩 Multimedia Content
 
-Which service would you like to know more about?
+Which service would you like to know more about {nombre}?
 `,
 
         servicio_fotografia: `
@@ -246,7 +246,7 @@ Which service would you like to know more about?
 `,
 
         default: `
-🤔 I didn’t fully understand your message.  
+🤔 I didn’t fully understand your message {nombre}.  
 You can ask about:
 • Photography  
 • Design  

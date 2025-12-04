@@ -29,7 +29,7 @@ export async function handleMessage(msg, client) {
         console.log("📩 Enviando al dueño:", OWNER_NUMBER);
 
         await client.sendMessage(
-            "5218671006263@c.us",
+            OWNER_NUMBER,
             `🔵 *Nuevo cliente requiere asesoramiento humano*\n\n📱 Número: ${from}\n📌 Mensaje: "${msg.body}"`
         );
 

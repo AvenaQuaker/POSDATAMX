@@ -48,7 +48,6 @@ classifier.addDocument("tienen redes sociales", "contacto");
 classifier.addDocument("cómo los encuentro", "contacto");
 classifier.addDocument("atención al cliente", "contacto");
 
-classifier.addDocument("contact", "contacto");
 classifier.addDocument("how can I contact you", "contacto");
 classifier.addDocument("do you have an email", "contacto");
 classifier.addDocument("can you give me your phone number", "contacto");
@@ -237,6 +236,28 @@ classifier.addDocument("marketing services", "servicios");
 
 classifier.train();
 
+let userName = null;
+let askedName = false;
+
+function extractName(msg) {
+    const patterns = [
+        /me llamo\s+([a-záéíóúñ ]+)/i,
+        /mi nombre es\s+([a-záéíóúñ ]+)/i,
+        /i am\s+([a-z ]+)/i,
+        /i'm\s+([a-z ]+)/i,
+        /my name is\s+([a-z ]+)/i
+    ];
+
+    for (const p of patterns) {
+        const match = msg.match(p);
+        if (match) {
+            return match[1].trim();
+        }
+    }
+    return null;
+}
+
+
 export function detectLanguage(text) {
     if (!text) return "es";
 
@@ -295,23 +316,43 @@ export function detectLanguage(text) {
 
 export function getBotReply(message) {
     if (!message || message.trim() === "") {
-        return respuestas.es.default; 
+        return respuestas.es.default;
     }
 
-    const msg = message.toLowerCase();
-    const lang = detectLanguage(msg); 
+    const msg = message.toLowerCase().trim();
+    const lang = detectLanguage(msg);
+
+    if (!userName && !askedName) {
+        askedName = true;
+
+        return lang === "es"
+            ? "Para poder ayudarte mejor, ¿cómo te llamas?"
+            : "To assist you better, what is your name?";
+    }
+
+    if (!userName && askedName) {
+        const name = extractName(msg) || msg.split(" ")[0];
+
+        if (name && name.length > 1) {
+            userName = name.charAt(0).toUpperCase() + name.slice(1);
+
+            return lang === "es"
+                ? `¡Mucho gusto, ${userName}! 😊\nAhora sí, dime: ¿en qué puedo ayudarte?`
+                : `Nice to meet you, ${userName}! 😊\nNow tell me, how can I help you?`;
+        }
+    }
 
     const keywordIntent = detectarClaves(msg, lang);
     if (keywordIntent && respuestas[lang][keywordIntent]) {
-        return respuestas[lang][keywordIntent];
+        return respuestas[lang][keywordIntent].replace("{nombre}", userName || "");
     }
 
     const result = classifier.getClassifications(msg)[0];
     const intent = result?.label;
 
     if (intent && respuestas[lang][intent]) {
-        return respuestas[lang][intent];
+        return respuestas[lang][intent].replace("{nombre}", userName || "");
     }
 
-    return respuestas[lang].default;
+    return respuestas[lang].default.replace("{nombre}", userName || "");
 }
