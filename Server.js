@@ -66,7 +66,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
   try {
-    Whatsapp();
+    //Whatsapp();
   } catch (err) {
       console.error("❌ Error al iniciar el bot:", err);
   }
