@@ -1,4 +1,4 @@
-const WHATSAPP_LINK = "https://wa.me/5218671006263";
+const WHATSAPP_LINK = "https://wa.me/5218671291218";
 
 export const respuestas = {
     es: {

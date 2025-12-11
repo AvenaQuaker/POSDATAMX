@@ -224,34 +224,84 @@ function handleMenu(num) {
     }
 }
 
-const userState = new Map(); 
+// Estado de usuarios
+const userState = new Map();
 
-const afirmativos = ["si","sí","claro","ok","vale","perfecto"];
+const afirmativos = ["si", "sí", "claro", "ok", "vale", "afirmativo"];
 
-export function getIAResponse(texto, from) {  
+export function getIAResponse(texto, from) {
     const msg = texto.toLowerCase().trim();
 
+    if (
+        msg.includes("humano") ||
+        msg.includes("asesor") ||
+        msg.includes("persona")
+    ) {
+        return {
+            text: respuestas.humano,
+            intent: "humano"
+        };
+    }
+
     if (/^[1-7]$/.test(msg)) {
+        if (msg === "7") {
+            return {
+                text: "👍 Claro, te contacto con un asesor. Un momento por favor...",
+                intent: "humano" 
+            };
+        }
+
         userState.set(from, "esperando_confirmacion");
-        return handleMenu(msg);
+        const respuesta = handleMenu(msg); 
+        return { text: respuesta, intent: "menu" };
     }
 
     if (userState.get(from) === "esperando_confirmacion") {
         if (afirmativos.includes(msg)) {
             userState.delete(from);
-            return respuestas.humano;
+            return {
+                text: respuestas.humano,
+                intent: "humano"
+            };
         }
     }
 
-    if (msg.includes("humano") || msg.includes("asesor") || msg.includes("persona")) {
-        return respuestas.humano;
-    }
-
     const top = classifier.getClassifications(msg)[0];
+    const intent = top?.label;
 
-    if (["foto","diseno","contenido","web","video","streaming"].includes(top.label)) {
-        userState.set(from, "esperando_confirmacion");
+    if (intent === "cotizacion") {
+        return {
+            text: respuestas.cotizacion,
+            intent: "cotizacion"
+        };
     }
 
-    return respuestas[top.label] || respuestas.default;
+    const servicios = [
+        "servicio_fotografia",
+        "servicio_diseno",
+        "servicio_web",
+        "servicio_video",
+        "servicio_streaming",
+        "servicio_multimedia"
+    ];
+
+    if (servicios.includes(intent)) {
+        userState.set(from, "esperando_confirmacion");
+        return {
+            text: respuestas[intent],
+            intent: intent
+        };
+    }
+
+    if (intent === "contacto") {
+        return {
+            text: respuestas.contacto,
+            intent: "humano"
+        };
+    }
+
+    return {
+        text: respuestas[intent] || respuestas.default,
+        intent: intent || "default"
+    };
 }
