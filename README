@@ -1,49 +1,69 @@
-# API de Comidas
+# POSDATAMX Digital Platform
 
-Esta API está diseñada para gestionar información sobre platillos. Permite crear, obtener, actualizar y eliminar platillos en una base de datos.
+Web development project created as part of my professional residency in Computer Systems Engineering.
 
-## Funcionalidades
+The project focused on the digital reengineering of the POSDATAMX corporate website, transforming the existing platform into a more dynamic, maintainable, multilingual, and administrable web application.
 
-La API proporciona las siguientes funcionalidades:
+## 🚀 Main Features
+Dynamic corporate website
+Backend development with Node.js and Express
+Database integration with MongoDB
+Spanish and English multilingual support
+Administrative panel for content management
+Dynamic content management using JSON configuration files
+SEO optimization and metadata management
+Chatbot functionality
+WhatsApp integration and automation
+Responsive web design
+Integration with external services and APIs
 
--   **GET** `/Foods`: Obtiene todos los platillos.
--   **POST** `/Foods`: Crea un nuevo platillo.
--   **PATCH** `/Foods`: Actualiza un platillo existente.
--   **GET** `/Foods/{key}`: Obtiene un platillo específico por su clave (ID).
--   **DELETE** `/Foods/{key}`: Elimina un platillo por su clave (ID).
+## 🛠️ Technologies
+Backend
+Node.js
+Express.js
+MongoDB
+Mongoose
+REST APIs
+Frontend
+HTML5
+CSS3
+JavaScript
+EJS
+Tailwind CSS
+Tools & Services
+Git / GitHub
+MongoDB Atlas
+Google Analytics
+Google Search Console
+WhatsApp Web integration
 
-## Requisitos
+## 📁 Project Structure
 
--   **Node.js**: La API está construida sobre Node.js, por lo que necesitas tenerlo instalado para ejecutar el servidor.
--   **MongoDB**: Se requiere una base de datos MongoDB para almacenar la información de los platillos.
+The application follows a server-side web architecture using Express and EJS, with separate components for routes, configuration, static resources, database services, translations, and administrative functionality.
 
-## Instalación
+Multilingual content is managed through configuration files, allowing the website to dynamically display content in English or Spanish.
 
-1. **Clonar el repositorio**
+## 🎯 Project Objectives
 
-    ```bash
-    git clone https://github.com/tu-usuario/comida-api.git
-    cd comida-api
-    ```
+The main objectives of the project were to:
 
-2. **Instalar dependencias**
+Modernize the company's existing digital platform.
+Improve website maintainability and scalability.
+Centralize content management.
+Provide multilingual support.
+Improve SEO and online visibility.
+Integrate database-driven functionality.
+Automate selected communication and administrative processes.
 
-    Instalar las dependencias necesarias con npm:
+## 🎓 Academic Context
 
-    ```bash
-    npm install
-    ```
+This project was developed during my Professional Residency as part of the Computer Systems Engineering program at the Instituto Tecnológico de Nuevo Laredo.
 
-3. **Configuración del entorno**
+The project provided practical experience in full-stack web development, database integration, API integration, automation, SEO, and deployment of a real-world corporate platform.
 
-    Asegúrate de tener una instancia de MongoDB corriendo y configura la URL de la base de datos en el archivo `.env` (o el archivo de configuración correspondiente).
+## 👨‍💻 Author
 
-4. **Iniciar el servidor**
+Jaime Aquino Martinez
+Computer Systems Engineer
 
-    Para iniciar el servidor, usa el siguiente comando:
-
-    ```bash
-    npm start
-    ```
-
-    El servidor estará corriendo en `http://localhost:1234`.
+Technologies: JavaScript · Node.js · Express · MongoDB · EJS · Tailwind CSS · REST APIs
